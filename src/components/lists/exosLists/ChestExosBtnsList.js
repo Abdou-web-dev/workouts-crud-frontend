@@ -4,11 +4,9 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import { IconButton } from "@mui/material";
 import { Stack } from "@mui/system";
 import { Button, Modal, Tooltip } from "antd";
-import "antd/dist/antd.css";
 import { useState } from "react";
 import minusIcon from "../../../assets/img/minus.png";
 import { ThumbnailModal } from "../../modals/ThumbnailModal";
-
 import "./exos_lists.scss";
 
 export function ChestExosBtnsList({
