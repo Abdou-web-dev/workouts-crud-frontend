@@ -1,0 +1,1087 @@
+@import "@fontsource/inconsolata";
+@import "@fontsource/mulish";
+@import "@fontsource/open-sans";
+//defining screen breakpoints for responsivness
+$x-small: 0px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1400px;
+.site-drawer-render-in-current-wrapper {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 2px;
+}
+// in order to center the index , regarding the container when the user filters the items
+.workout-details-top-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .index-text-wrapper {
+    span {
+      font-family: "Inconsolata";
+      font-size: 4em;
+    }
+  }
+}
+
+.workout-details-container {
+  &.workout-details-container-as-list {
+    background-color: white;
+    margin-bottom: 20px;
+    background-color: rgba(168, 200, 180, 0.16);
+    //pos relative in order to position the exo icon on top in the middle on hover
+    position: relative;
+
+    &.black-border-selected {
+      border: 1.5px solid black;
+    }
+    .work-details-left-content {
+      .work-details-left-content-inner {
+        border-radius: 4px;
+        margin: 20px auto;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .work-details-left-inner-reps-checkmark {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+        .work-details-left-inner-reps {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        h4 {
+          margin: 0 0 10px 0;
+          font-size: 1.6em;
+          color: var(--primary);
+          font-weight: bolder;
+        }
+
+        span {
+          margin: 0;
+          font-size: 1.15em;
+          color: #555;
+          white-space: nowrap;
+        }
+      }
+    }
+    .work-details-right-content {
+      margin-top: 12px;
+      margin-right: 12px;
+      border-bottom: 1px solid #9f2241; /* This creates the border. */
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .icon-btn-edit {
+        .edit-img {
+          width: 24px;
+          height: 24px;
+          color: gray;
+        }
+        .checkmarkIcon {
+          width: 34px;
+          height: 34px;
+          // opacity: 0.82;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .work-details-right-inner {
+        &.control-btns {
+          .work-details-right-inner-iconbtn {
+            &.star-icon {
+              // border: 1px solid red;
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+    .exo-category-icon-wrapper {
+      padding-top: 7px;
+      padding-right: 7px;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      display: none;
+      border-top: 0.5px solid #1aac83;
+      padding: 5px 15px;
+      img.exo-category-icon {
+        width: 40px;
+        height: 40px;
+      }
+      h4.exo-category-workout-category {
+        color: gray;
+        font-style: italic;
+        font-family: "Inconsolata";
+        font-size: 18px;
+      }
+    }
+    &.workout-details-filtered {
+      .work-details-right-inner-iconbtn {
+        align-self: center;
+      }
+      h4.work-details-left-content-inner-title {
+        background: rgba(255, 255, 0, 0.25);
+      }
+    }
+    @media screen and (min-width: $x-large) and (max-width: $xx-large) {
+      width: 90%;
+      padding-left: 50px;
+      .work-details-left-content {
+        width: 70% !important;
+        // border: 1px solid;
+        .work-details-left-content-inner {
+          // work-details-left-inner-load
+          // work-details-left-inner-reps
+          // work-details-left-inner-date
+          h4 {
+            color: #1aac83cb;
+          }
+        }
+      }
+      .work-details-right-content {
+        border-bottom: 0; /* This creates the border. */
+        // border: 1px solid;
+        width: 10% !important;
+        margin-top: 90px;
+        margin-left: 50px;
+        .icon-btn-edit {
+          .edit-img {
+            width: 24px;
+            height: 24px;
+            color: gray;
+          }
+        }
+
+        .work-details-right-inner {
+          // display: flex;
+          // flex-direction: column;
+          &.control-btns {
+            .work-details-right-inner-iconbtn {
+            }
+          }
+        }
+      }
+      .exo-category-icon-wrapper {
+        padding-top: 7px;
+        padding-right: 7px;
+        position: absolute;
+        right: 50%;
+        top: 0;
+        display: none;
+        border-top: 0.5px solid #1aac83;
+        padding: 5px 15px;
+        img.exo-category-icon {
+          width: 40px;
+          height: 40px;
+        }
+        h4.exo-category-workout-category {
+          color: gray;
+          font-style: italic;
+          font-family: "Inconsolata";
+          font-size: 18px;
+        }
+      }
+      &.workout-details-filtered {
+        // border: 1px solid red;
+        width: 100%;
+        .work-details-right-inner-iconbtn {
+          align-self: center;
+        }
+        h4.work-details-left-content-inner-title {
+          background: rgba(255, 255, 0, 0.25);
+        }
+      }
+    }
+    @media screen and (min-width: $large) and (max-width: $x-large) {
+      border: 1px solid lightgray;
+      width: 95%;
+      padding-left: 50px;
+      // border: 1px solid;
+      .work-details-left-content {
+        width: 70% !important;
+      }
+      .work-details-right-content {
+        border-bottom: 0;
+        width: 10% !important;
+        margin-top: 90px;
+        margin-left: 50px;
+        .icon-btn-edit {
+          .edit-img {
+            width: 24px;
+            height: 24px;
+            color: gray;
+          }
+        }
+      }
+      .exo-category-icon-wrapper {
+        padding-top: 7px;
+        padding-right: 7px;
+        position: absolute;
+        right: 50%;
+        top: 0;
+        display: none;
+        border-top: 0.5px solid #1aac83;
+        padding: 5px 15px;
+        img.exo-category-icon {
+          width: 40px;
+          height: 40px;
+        }
+        h4.exo-category-workout-category {
+          color: gray;
+          font-style: italic;
+          font-family: "Inconsolata";
+          font-size: 18px;
+        }
+      }
+      &.workout-details-filtered {
+        width: 100%;
+        .work-details-right-inner-iconbtn {
+          align-self: center;
+        }
+        h4.work-details-left-content-inner-title {
+          background: rgba(255, 255, 0, 0.25);
+        }
+      }
+    }
+    @media screen and (min-width: $medium) and (max-width: $large) {
+      border: 2px solid lightgray;
+      padding-left: 50px;
+      margin-left: 90px;
+
+      .work-details-left-content {
+        h4.work-details-left-content-inner-title {
+          white-space: nowrap;
+        }
+        button.work-details-left-inner-iconbtn {
+          svg {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .work-details-right-content {
+        border-bottom: 0;
+        width: 10% !important;
+        margin-top: 90px;
+        margin-left: 0px;
+        .icon-btn-edit {
+          .edit-img {
+            width: 24px;
+            height: 24px;
+            color: gray;
+          }
+        }
+      }
+      .exo-category-icon-wrapper {
+        padding-top: 7px;
+        padding-right: 7px;
+        position: absolute;
+        right: 50%;
+        top: 0;
+        display: none;
+        border-top: 0.5px solid #1aac83;
+        padding: 5px 15px;
+        img.exo-category-icon {
+          width: 40px;
+          height: 40px;
+        }
+        h4.exo-category-workout-category {
+          color: gray;
+          font-style: italic;
+          font-family: "Inconsolata";
+          font-size: 18px;
+        }
+      }
+      &.workout-details-filtered {
+        width: 100%;
+        .work-details-right-inner-iconbtn {
+          align-self: center;
+        }
+        h4.work-details-left-content-inner-title {
+          background: rgba(255, 255, 0, 0.25);
+        }
+      }
+    }
+    // starting from 700px and below, the form will be opened in a modal through a btn click
+    @media screen and (min-width: 700px) and (max-width: $medium) {
+      border: 1px solid lightgray;
+      width: 95%;
+      padding-left: 0px;
+
+      .work-details-left-content {
+        width: 70% !important;
+        .work-details-left-content-inner {
+          padding-left: 40px;
+          button.work-details-left-inner-iconbtn {
+            display: none;
+          }
+          h4 {
+            color: #1aac83cb;
+            &::before {
+              content: "\2022";
+              margin-right: 4px;
+            }
+          }
+          .work-details-left-inner-load {
+            margin-bottom: 15px;
+          }
+          .work-details-left-inner-reps {
+            margin-bottom: 15px;
+          }
+          // .work-details-left-inner-date {}
+        }
+      }
+      .work-details-right-content {
+        // border: 1px solid;
+        border-bottom: 0;
+        width: 10% !important;
+        margin-top: 90px;
+        margin-left: 10px;
+        .icon-btn-edit {
+          .edit-img {
+            width: 24px;
+            height: 24px;
+            color: gray;
+          }
+        }
+      }
+      .exo-category-icon-wrapper {
+        padding-top: 7px;
+        padding-right: 7px;
+        position: absolute;
+        right: 50%;
+        top: 0;
+        display: none;
+        border-top: 0.5px solid #1aac83;
+        padding: 5px 15px;
+        img.exo-category-icon {
+          width: 40px;
+          height: 40px;
+        }
+        h4.exo-category-workout-category {
+          color: gray;
+          font-style: italic;
+          font-family: "Inconsolata";
+          font-size: 18px;
+        }
+      }
+      &.workout-details-filtered {
+        width: 100%;
+        .work-details-right-inner-iconbtn {
+          align-self: center;
+        }
+        h4.work-details-left-content-inner-title {
+          background: rgba(255, 255, 0, 0.25);
+        }
+      }
+    }
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+      .work-details-left-content {
+        h4 {
+          color: #1aac83cb;
+          font-size: 1.3em !important;
+        }
+      }
+    }
+    @media screen and (max-width: 880px) {
+      &.move_to_left_list {
+        width: 76%;
+        border: 1px solid;
+      }
+    }
+  }
+  //list of relevant workouts either to Chest,....
+  &.condensed-workouts-filter-results {
+    background-color: rgba(36, 40, 41, 0.25);
+    position: relative;
+    margin-bottom: 25px;
+    padding: 30px 10px;
+    padding-top: 0;
+    width: 800px;
+    &:hover {
+      background-color: rgba(36, 40, 41, 0.35);
+    }
+    .work-details-single-workout {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .work-details-content-filters-btns-title {
+        font-size: 1.2em;
+        color: white;
+        font-weight: bolder;
+        font-family: "Inconsolata";
+        letter-spacing: 1.5px;
+      }
+      .work-details-content-filters-btns-infos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 25px;
+
+        .work-details-content-filters-btns-load {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 10px;
+          .work-details-load-img {
+            width: 50px;
+            height: 50px;
+          }
+          .load-span1 {
+            font-family: "Mulish";
+
+            .span1-kg {
+              font-style: italic;
+              font-family: "Inconsolata";
+            }
+          }
+          .load-span2 {
+            font-family: "Open Sans";
+          }
+        }
+        .work-details-content-filters-btns-reps {
+          margin-left: 5px;
+          .reps-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .reps-img {
+              width: 50px;
+              height: 50px;
+            }
+            .reps-span1 {
+              font-family: "Mulish";
+              .span1-kg {
+                font-style: italic;
+                font-family: "Inconsolata";
+              }
+            }
+            .reps-span2 {
+              font-family: "Open Sans";
+            }
+          }
+        }
+        .work-details-content-filters-btns-date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          max-width: 90px;
+          margin-left: 10px;
+          .date-img {
+            width: 50px;
+            height: 50px;
+          }
+          .date-text {
+            font-style: italic;
+            font-family: "Inconsolata";
+          }
+        }
+      }
+    }
+  }
+}
+
+.workout-details-container {
+  &.workout-details-container-as-grid {
+    background-color: rgba(0, 180, 216, 0.075);
+    position: relative;
+
+    .workout-details {
+      min-height: 264px;
+      justify-content: center;
+      align-items: center;
+
+      .work-details-left-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .work-details-left-content-inner {
+          margin: 0;
+          padding: 0;
+          .work-details-left-inner-iconbtn {
+            display: none;
+          }
+          h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+            color: #00b4d8;
+            font-weight: bolder;
+          }
+          .work-details-left-inner-load {
+            .work-details-left-inner-load-span1 {
+              margin-right: 5px;
+              span.span1-kg {
+                font-style: italic;
+                font-family: "Inconsolata";
+              }
+            }
+            .work-details-left-inner-load-span2 {
+              font-size: 2em;
+              color: #555;
+            }
+          }
+          .work-details-left-inner-reps {
+            .work-details-left-inner-reps-span1 {
+              margin-right: 5px;
+              span.span1-kg {
+                font-style: italic;
+              }
+            }
+            .work-details-left-inner-reps-span2 {
+              font-size: 2em;
+              color: rgba(85, 85, 85, 0.8);
+            }
+          }
+          .work-details-left-inner-date {
+            // border: 1px solid red;
+            margin: 0 auto;
+            span {
+              font-family: "Inconsolata";
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+      .work-details-right-content {
+        height: fit-content;
+        margin-top: 0px;
+        margin-right: 12px;
+        border-bottom: none;
+
+        .work-details-right-inner {
+          &.control-btns {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            .control-btns-checkbox {
+              position: relative;
+              right: 2px;
+            }
+          }
+        }
+        .work-details-right-inner-iconbtn {
+          // border: 1px solid red;
+        }
+        .icon-btn-edit {
+          .edit-img {
+            width: 24px;
+            height: 24px;
+            color: gray;
+          }
+        }
+      }
+    }
+
+    &.workout-details-filtered {
+      border: 1px solid #727e8043;
+      background: rgba(225, 214, 214, 0.15);
+      padding: 5px;
+      .work-details-right-inner-iconbtn {
+        align-self: center;
+      }
+      h4.work-details-left-content-inner-title {
+        background: rgba(255, 255, 0, 0.25);
+      }
+    }
+    .exo-category-icon-wrapper {
+      padding-top: 7px;
+      padding-right: 7px;
+      position: absolute;
+      right: 30%;
+      top: 0;
+      display: none;
+      img.exo-category-icon {
+        width: 40px;
+        height: 40px;
+      }
+      h4.exo-category-workout-category {
+        color: gray;
+        font-style: italic;
+        font-family: "Inconsolata";
+      }
+    }
+  }
+  //initial list of workouts, 3rd btn
+  &.workouts-details-filter-btns-clicked {
+    background-color: rgba(36, 40, 41, 0.48);
+    position: relative;
+    margin-bottom: 25px;
+    padding: 20px 10px;
+
+    &:hover {
+      background-color: rgba(36, 40, 41, 0.55);
+    }
+    .work-details-single-workout {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .work-details-content-filters-btns-title {
+        font-size: 1.2em;
+        color: white;
+        font-weight: bolder;
+        font-family: "Inconsolata";
+        letter-spacing: 1.5px;
+      }
+      .work-details-content-filters-btns-infos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+
+        .work-details-content-filters-btns-load {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 10px;
+          .work-details-load-img {
+            width: 50px;
+            height: 50px;
+          }
+          .load-span1 {
+            font-family: "Mulish";
+
+            .span1-kg {
+              font-style: italic;
+              font-family: "Inconsolata";
+            }
+          }
+          .load-span2 {
+            font-family: "Open Sans";
+          }
+        }
+        .work-details-content-filters-btns-reps {
+          margin-left: 5px;
+          .reps-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .reps-img {
+              width: 50px;
+              height: 50px;
+            }
+            .reps-span1 {
+              font-family: "Mulish";
+              .span1-kg {
+                font-style: italic;
+                font-family: "Inconsolata";
+              }
+            }
+            .reps-span2 {
+              font-family: "Open Sans";
+            }
+          }
+        }
+        .work-details-content-filters-btns-date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          max-width: 90px;
+          margin-left: 10px;
+          .date-img {
+            width: 50px;
+            height: 50px;
+          }
+          .date-text {
+            font-style: italic;
+            font-family: "Inconsolata";
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1040px) and (max-width: 1160px) {
+    &.workout-details-container-as-grid {
+      .workout-details {
+        .work-details-right-content {
+          .work-details-right-inner {
+            &.control-btns {
+              .control-btns-checkbox {
+                position: relative;
+                right: 5px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 992px) and (max-width: 1040px) {
+    &.workout-details-container-as-grid {
+      .workout-details {
+        .work-details-right-content {
+          .work-details-right-inner {
+            &.control-btns {
+              .control-btns-checkbox {
+                position: relative;
+                right: 10px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $medium) and (max-width: $large) {
+    &.move_to_left_grid {
+      width: 80%;
+      position: relative;
+      // left: 120px;
+    }
+    &.workouts-details-filter-btns-clicked {
+      background-color: rgba(36, 40, 41, 0.4);
+      padding: 0px;
+      &:hover {
+        background-color: rgba(36, 40, 41, 0.55);
+      }
+      .work-details-single-workout {
+        .work-details-content-filters-btns-title {
+          // border: 1px solid;
+          font-size: 1.2em;
+          color: white;
+          font-weight: bolder;
+          font-family: "Inconsolata";
+          letter-spacing: 1.5px;
+        }
+        .work-details-content-filters-btns-infos {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 25px;
+
+          .work-details-content-filters-btns-load {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 10px;
+            .work-details-load-img {
+              width: 50px;
+              height: 50px;
+            }
+            .load-span1 {
+              font-family: "Mulish";
+
+              .span1-kg {
+                font-style: italic;
+                font-family: "Inconsolata";
+              }
+            }
+            .load-span2 {
+              font-family: "Open Sans";
+            }
+          }
+          .work-details-content-filters-btns-reps {
+            margin-left: 5px;
+            .reps-inner {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              .reps-img {
+                width: 50px;
+                height: 50px;
+              }
+              .reps-span1 {
+                font-family: "Mulish";
+                .span1-kg {
+                  font-style: italic;
+                  font-family: "Inconsolata";
+                }
+              }
+              .reps-span2 {
+                font-family: "Open Sans";
+              }
+            }
+          }
+          .work-details-content-filters-btns-date {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 90px;
+            margin-left: 10px;
+            .date-img {
+              width: 50px;
+              height: 50px;
+            }
+            .date-text {
+              font-style: italic;
+              font-family: "Inconsolata";
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 850px) {
+    &.workouts-details-filter-btns-clicked {
+      .work-details-single-workout {
+        padding: 15px;
+      }
+    }
+  }
+  @media screen and (min-width: 767px) and (max-width: 800px) {
+    background-color: rgba(0, 180, 216, 0.065) !important;
+    position: relative;
+    left: 50px;
+    width: 450px !important;
+  }
+  @media screen and (min-width: 700px) and (max-width: 767px) {
+    background-color: rgba(0, 180, 216, 0.09) !important;
+    position: relative;
+    right: 50px;
+    width: 450px !important;
+  }
+}
+.work-details-content-filters-btns-collapse-icon {
+  position: relative;
+  bottom: 20px;
+  // border: 1px solid red;
+}
+
+.border-selected-red {
+  border: 3px solid rgb(230, 161, 161);
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.workout-details-drawer {
+  &.ant-drawer {
+    &.ant-drawer-open {
+      .ant-drawer-wrapper-body {
+        .ant-drawer-header {
+          .ant-drawer-close {
+            .anticon {
+              &.anticon-close {
+                &:hover {
+                  transform: scale(1.5);
+                }
+              }
+            }
+          }
+        }
+        .ant-drawer-body {
+          .workout-details-imgs {
+            img {
+              width: 64px;
+              height: 64px;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+          .workout-details-imgs-grid {
+            img {
+              width: 34px;
+              height: 34px;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 650px) and (max-width: 800px) {
+    .ant-drawer-body {
+      .workout-details-imgs {
+        img {
+          width: 44px !important;
+          height: 44px !important;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      .workout-details-imgs-grid {
+        img {
+          width: 34px;
+          height: 34px;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination-content-loaded {
+  .ant-pagination-item a {
+    color: #1890ff;
+    font-size: 30px;
+  }
+  .ant-pagination-item {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.ant-pagination-item-active {
+      background-color: #188fff15;
+    }
+  }
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    width: 54px;
+    height: 54px;
+  }
+  .anticon-left,
+  .anticon-right {
+    transform: scale(1.5);
+  }
+}
+
+.workout-details-container0,
+.workout-details-container1,
+.workout-details-container2 {
+  // border: 1px solid red;
+  .ant-drawer-content-wrapper {
+    &.ant-drawer-content-wrapper-hidden {
+    }
+  }
+}
+
+// box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.workout-infos-drawer {
+  .ant-drawer-content-wrapper {
+    .ant-drawer-content {
+      .ant-drawer-wrapper-body {
+        .ant-drawer-body {
+          &::-webkit-scrollbar {
+            width: 15px;
+          }
+          &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background: rgba(161, 160, 160, 0.05);
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.2);
+          }
+          &::-webkit-scrollbar-thumb:hover {
+            border-radius: 10px;
+            background: rgba(23, 22, 22, 0.44);
+          }
+        }
+      }
+    }
+  }
+}
+
+.MuiInputBase-root {
+  &.MuiInput-root {
+    &.MuiInput-underline {
+      &.Mui-focused {
+        // padding: 1.5px 0;
+      }
+    }
+  }
+}
+.condensed-workouts {
+  width: 180px;
+  height: 180px;
+  // background: rgba(128, 128, 128, 0.75);
+  .workout-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .work-details-left-content {
+      .work-details-left-content-inner {
+        margin: 0;
+        padding: 0;
+        .work-details-left-inner-iconbtn {
+          display: none;
+        }
+
+        h4 {
+          margin: 10px 0 10px 0;
+          font-size: 1.2em;
+          color: #f3ce13;
+          font-weight: bolder;
+        }
+        .work-details-left-inner-load {
+          .work-details-left-inner-load-span1 {
+            margin-right: 5px;
+            color: white;
+            span.span1-kg {
+              font-style: italic;
+              font-family: "Inconsolata";
+            }
+          }
+          .work-details-left-inner-load-span2 {
+            font-size: 2em;
+            color: #555;
+          }
+        }
+        .work-details-left-inner-reps {
+          .work-details-left-inner-reps-span1 {
+            margin-right: 5px;
+            color: white;
+            font-size: 12px;
+
+            span.span1-kg {
+              font-style: italic;
+            }
+          }
+          .work-details-left-inner-reps-span2 {
+            font-size: 1.25em;
+            color: rgba(85, 85, 85, 0.8);
+            font-weight: bolder;
+          }
+        }
+
+        .work-details-left-inner-date {
+          margin-top: 10px;
+
+          span {
+            font-family: "Inconsolata";
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 0px;
+          }
+        }
+      }
+    }
+    .work-details-right-content {
+      display: none;
+    }
+  }
+}

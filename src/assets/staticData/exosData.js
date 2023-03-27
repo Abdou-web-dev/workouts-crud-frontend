@@ -1,0 +1,123 @@
+export const AbsExos = [
+  { value: "Ab Rollout" },
+  { value: "Weighted Plank" },
+  { value: "Hollow Hold/Rock" },
+  { value: "Pallof Press" },
+  { value: "L-Sit" },
+  { value: "Sit-up" },
+  { value: "Hanging Knee Raise" },
+  { value: "Medicine Ball Slam" },
+  { value: "Toes to Bar" },
+  { value: "Weighted Stability Ball Crunch" },
+];
+export const BackExos = [
+  { value: "Deadlift" },
+  { value: "Pull-Up" },
+  { value: "Bent-Over Row" },
+  { value: "Single-Arm Dumbbell Row" },
+  { value: "Inverted Row" },
+  { value: "TRX Suspension Row" },
+  { value: "Lat Pulldown" },
+  { value: "Neutral Grip Pulldown" },
+  { value: "Cable Trap Shrug" },
+  { value: "Landmine Row" },
+];
+export const ChestExos = [
+  { value: "Barbell Flat Bench Press" },
+  { value: "Barbell Incline Bench Press" },
+  { value: "Barbell Decline Bench Press" },
+  { value: "Chest Flye" },
+  { value: "Dumbbell Bench Press" },
+  { value: "Push-Up" },
+  { value: "Dip" },
+  { value: "Svend Press" },
+  { value: "Cable Iron Cross" },
+  { value: "Chaos Push-Up" },
+];
+
+export const ShouldersExos = [
+  { value: "Barbell Overhead Press" },
+  { value: "Half-Kneeling Landmine Press" },
+  { value: "Arnold Press" },
+  { value: "Push Press" },
+  { value: "Bottoms-Up Kettlebell Press" },
+  { value: "Wide-Grip Seated Row" },
+  { value: "Wide-Grip Seated Row" },
+  { value: "Incline Y Raise" },
+  { value: "Stability Bent Over Dumbbell Rear Delt Raise" },
+  { value: "Seated Dumbbell Shoulder Press" },
+];
+
+export const CalvesExos = [
+  { value: "Standing Calf Raises" },
+  { value: "Seated Calf Raises" },
+  { value: "Elevated Calf Raises" },
+  { value: "Jump Rope" },
+  { value: "Bent-Knee Calf Raises" },
+  { value: "Single-Leg Calf Raises" },
+  { value: "Farmer's Carry (Farmer's Walk)" },
+  { value: "Jumping Jack" },
+  { value: "Ankle Mobilization" },
+  { value: "Tiptoe Walk" },
+];
+export const BicepsExos = [
+  { value: "Barbell Curl" },
+  { value: "Chin-Up" },
+  { value: "EZ-Bar Preacher Curl" },
+  { value: "Hammer Curl" },
+  { value: "Incline Dumbbell Curl" },
+  { value: "Facing-Away Cable Curl" },
+  { value: "Reverse-Grip Bent-Over Row" },
+  { value: "Cable Curl" },
+  { value: "Concentration Curl" },
+  { value: "EZ-Bar Reverse Curl" },
+];
+export const TricepsExos = [
+  { value: "Close-Grip Barbell Bench Press" },
+  { value: "Parallel Bar Dip" },
+  { value: "Triceps Pushdown" },
+  { value: "Skull Crusher" },
+  { value: "Floor Press" },
+  { value: "Decline Bench Cable Extension" },
+  { value: "JM Press" },
+  { value: "Overhead Triceps Extension" },
+  { value: "Diamond Push-Up" },
+  { value: "Unilateral Dumbbell Floor Press" },
+];
+
+export const TrapeziusExos = [
+  { value: "Deadlift" },
+  { value: "Shrugs" },
+  { value: "Barbell Row" },
+  { value: "Reverse Dumbbell Flyes" },
+  { value: "Pull-Up" },
+  { value: "Lat-Pulldown" },
+  { value: "Farmer's Carry" },
+  { value: "Face Pull" },
+  { value: "Incline Dumbbell Row" },
+  { value: "Bent Over Y" },
+];
+export const HamstringsExos = [
+  { value: "Glute Bridge" },
+  { value: "Single-leg Glute Bridge" },
+  { value: "Bench Hip Thrust" },
+  { value: "Hamstring Curl with Sliders" },
+  { value: "Nordic Hamstring Curl" },
+  { value: "Single-leg Romanian Deadlift" },
+  { value: "Walking Lunges" },
+  { value: "Rear-Foot Elevated Lunge" },
+  { value: "Single-leg Banded Hip Thrust" },
+  { value: "Kettlebell Swing" },
+];
+export const ForearmsExos = [
+  { value: "Dumbbell Wrist Flexion" },
+  { value: "Dumbbell Wrist Extension" },
+  { value: "Dumbbell Reverse Curl" },
+  { value: "Farmer’s Walk" },
+  { value: "Pull-Up Bar Hang" },
+  { value: "Towel Pull-Up Hang" },
+  { value: "Inverted Row" },
+  { value: "Zottman Curl" },
+  { value: "Hammer Curl" },
+  { value: "Upright Dumbbell Row" },
+];

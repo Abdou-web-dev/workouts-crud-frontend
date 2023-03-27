@@ -1,0 +1,371 @@
+@import "@fontsource/inconsolata";
+//defining screen breakpoints for responsivness
+$x-small: 0px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1400px;
+
+.workouts-page-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  //setting minheight to 1400px will prevent the page fro mscrolling to the top when navigating between chest sub pages
+  min-height: 1400px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  margin-left: 50px;
+  .workouts-main-section {
+    height: 100%;
+  }
+  .workouts-main-form {
+  }
+  .divider {
+  }
+  @media screen and (min-width: $x-large) and (max-width: $xx-large) {
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    //setting minheight to 1400px will prevent the page fro mscrolling to the top when navigating between chest sub pages
+    min-height: 1400px;
+    display: flex;
+    gap: 30px;
+    margin-left: 25px;
+    // border: 1px solid green;
+    .workouts-main-section {
+      height: 100%;
+      flex: 70%;
+    }
+    .workouts-main-form {
+      flex: 25%;
+    }
+    .divider {
+      // border: 1px solid red;
+    }
+  }
+  @media screen and (min-width: $medium) and (max-width: $large) {
+    .workouts-main-section {
+      margin-left: -30px;
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: $medium) {
+    margin-left: 0px !important;
+    .workouts-main-section {
+      margin-left: -30px;
+    }
+  }
+  @media screen and (min-width: $medium) and (max-width: $large) {
+    .workouts-main-form {
+      &.form-3rd-section {
+        max-width: 140px !important;
+        margin-top: 150px;
+        margin-left: 5px;
+      }
+    }
+  }
+  @media screen and (min-width: $x-small) and (max-width: $large) {
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    min-height: 1400px;
+    display: flex;
+    gap: 30px;
+    margin-left: 25px;
+    .workouts-main-section {
+      height: 100%;
+      flex: 70%;
+      order: 2;
+    }
+    .workouts-main-form {
+      order: 1;
+      flex: 25%;
+      // border: 1px solid red;
+      max-width: 320px;
+    }
+    .divider {
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 800px) {
+    .workouts-main-section {
+      position: relative;
+      right: 100px;
+    }
+    .workouts-main-form {
+      position: relative;
+      top: 100px;
+      left: 250px;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 769px) {
+    .workouts-main-section {
+      position: relative;
+      right: 0px;
+    }
+    .workouts-main-form {
+      position: relative;
+      top: 100px;
+      left: 200px;
+    }
+  }
+  @media screen and (min-width: 520px) and (max-width: 600px) {
+    .workouts-main-form {
+      position: relative;
+      top: 100px;
+      left: 200px;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 520px) {
+    .workouts-main-form {
+      position: relative;
+      top: 100px;
+      left: 130px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .workouts-main-form {
+      margin-top: 30px;
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: 770px) {
+    .workouts-main-form {
+      position: relative;
+      left: 250px;
+    }
+  }
+  @media screen and (min-width: 550px) and (max-width: 630px) {
+    .workouts-main-form {
+      position: relative;
+      left: 150px;
+    }
+  }
+  @media screen and (min-width: 520px) and (max-width: 550px) {
+    .workouts-main-form {
+      position: relative;
+      left: 150px;
+    }
+  }
+  @media screen and (min-width: 400px) and (max-width: 460px) {
+    .workouts-main-form {
+      position: relative;
+      left: 100px !important;
+    }
+  }
+  @media screen and (min-width: 350px) and (max-width: 400px) {
+    .workouts-main-form {
+      // display: none;
+      position: relative;
+      left: 70px !important;
+    }
+  }
+  @media screen and (min-width: 200px) and (max-width: 350px) {
+    .workouts-main-form {
+      // display: none;
+      position: relative;
+      left: 40px !important;
+    }
+  }
+}
+.pagination-content-loaded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 100px 0px;
+  margin-top: 70px;
+
+  .ant-pagination-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ant-pagination-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.pagination-content-loaded-grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 215px;
+  gap: 10px;
+  .ant-pagination-prev {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ant-pagination-item {
+    font-family: "Inconsolata";
+    &.ant-pagination-item-active {
+      font-size: 30px;
+      padding: 5px;
+      height: fit-content;
+    }
+  }
+  .ant-pagination-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &.pagination-content-loaded-grid-to-bottom {
+    position: relative;
+    top: -280px;
+  }
+}
+.pagination-filtered-results {
+  position: relative;
+  bottom: 500px;
+  .ant-pagination-item {
+    display: none;
+  }
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .ant-pagination-prev {
+    position: relative;
+    bottom: 400px;
+  }
+  .ant-pagination-next {
+    position: relative;
+    bottom: 400px;
+    margin-left: 800px;
+  }
+  &.pagination-filtered-results-list {
+    position: relative;
+    bottom: 830px;
+    .ant-pagination-prev {
+      position: relative;
+      bottom: 400px;
+      left: 290px;
+    }
+    .ant-pagination-next {
+      position: relative;
+      bottom: 400px;
+      margin-left: 700px;
+    }
+  }
+  &.pagination-filtered-results-grid {
+    .ant-pagination-prev {
+      position: relative;
+      bottom: 500px;
+      left: 30px;
+    }
+    .ant-pagination-next {
+      position: relative;
+      bottom: 500px;
+      margin-left: 950px;
+    }
+  }
+
+  &.pagination-filtered-results-less-than4 {
+    .ant-pagination-prev {
+      display: none;
+    }
+    .ant-pagination-next {
+      display: none;
+    }
+  }
+  &.pagination-filtered-results-none {
+    .ant-pagination-prev {
+      display: none;
+    }
+    .ant-pagination-next {
+      display: none;
+    }
+  }
+}
+
+.skeleton-content-not-loaded {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .pagination-content-not-loaded {
+    align-self: center;
+    transform: scale(1.2);
+  }
+  .spinner {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    transform: scale(2);
+  }
+}
+
+//by default , components nested inside mui Skeleton component are in the DOM but hidden, so we type this to make the antd Skeleton child be visible
+.MuiSkeleton-root {
+  &.MuiSkeleton-rectangular {
+    &.MuiSkeleton-pulse {
+      &.MuiSkeleton-withChildren {
+        & > * {
+          visibility: visible !important;
+        }
+      }
+    }
+  }
+}
+// html : class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse MuiSkeleton-withChildren"
+
+.no-match {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  .home-begin {
+    .home-begin-btn {
+      height: fit-content;
+      padding: 12px 25px;
+      span {
+        font-family: "Mulish";
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.starred-items-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  @media screen and (min-width: $large) and (max-width: $xx-large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: $medium) and (max-width: $large) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: $small) and (max-width: $medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: $x-small) and (max-width: $small) {
+    grid-template-columns: 1fr;
+    //this is how we center grid items at the center of the page
+    justify-items: center;
+    align-content: center;
+  }
+}

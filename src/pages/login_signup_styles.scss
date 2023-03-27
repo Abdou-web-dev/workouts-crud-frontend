@@ -1,0 +1,1066 @@
+//defining screen breakpoints for responsivness
+$x-small: 0px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1400px;
+
+.login-form-container {
+  .login-form-inner {
+    margin-bottom: 100px;
+    .login-form {
+      padding: 5px 170px;
+      width: 100%;
+      min-height: 650px;
+      background: rgba(0, 180, 216, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .login-form-email-item {
+        .ant-form-item-row {
+          .ant-form-item-label {
+            margin-top: 24px;
+            position: relative;
+            right: 15px;
+            font-family: "Mulish";
+          }
+        }
+        .login-form-email-item-input {
+          // border: 1px solid;
+          width: 100%;
+          height: 60px;
+        }
+        .login-form-email-item-input-empty {
+          border-bottom: 1px solid red;
+          &::after {
+            display: flex;
+            align-items: center;
+            content: "!";
+            margin-left: 10px;
+            color: red;
+            font-weight: bold;
+          }
+        }
+        .login-form-email-item-label {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .login-form-full-name-item {
+        .ant-form-item-row {
+          .ant-form-item-label {
+            position: relative;
+            right: 35px;
+            margin-top: 24px;
+            font-family: "Mulish";
+          }
+          .ant-form-item-control {
+            position: relative;
+            left: 20px;
+          }
+        }
+        .login-form-full-name-item-input {
+          width: 100%;
+          height: 60px;
+        }
+        .login-form-full-name-item-input-empty {
+          border-bottom: 1px solid red;
+          &::after {
+            display: flex;
+            align-items: center;
+            content: "!";
+            margin-left: 10px;
+            color: red;
+            font-weight: bold;
+            font-weight: bold;
+          }
+        }
+        .login-form-full-name-item-label {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .login-form-gender-item {
+        .ant-form-item-row {
+          .ant-form-item-label {
+            position: relative;
+            right: 45px;
+            margin-top: 24px;
+            font-family: "Mulish";
+          }
+          .ant-form-item-control {
+            position: relative;
+            left: 30px;
+            top: 25px;
+          }
+        }
+
+        .login-form-gender-item-label {
+          span {
+            font-size: 20px;
+          }
+        }
+        // .login-form-checkboxes {
+        // }
+        .login-form-selected-avatar {
+          padding: 5px;
+          display: flex;
+          position: relative;
+          bottom: 20px;
+          border: 1px solid lightgray;
+          width: 120px;
+          .login-form-selected-avatar-icon {
+            width: 80px;
+            height: 80px;
+          }
+          .login-form-selected-avatar-edit-icon-btn {
+            padding: 0;
+            height: fit-content;
+
+            background: none;
+            border: none;
+            .login-form-selected-avatar-edit-icon {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+      .login-form-password-item {
+        .ant-form-item-row {
+          .ant-form-item-label {
+            position: relative;
+            right: 35px;
+            margin-top: 24px;
+            font-family: "Mulish";
+          }
+          .ant-form-item-control {
+            position: relative;
+            left: 20px;
+          }
+        }
+        .login-form-password-item-input {
+          width: 100%;
+          height: 60px;
+        }
+        .login-form-password-item-input-empty {
+          border-bottom: 1px solid red;
+          &::after {
+            display: flex;
+            align-items: center;
+            content: "!";
+            margin-left: 10px;
+            color: red;
+            font-weight: bold;
+          }
+        }
+        .login-form-password-item-label {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .login-form-btn-item {
+        margin-left: 4px;
+        width: 100%;
+
+        .login-form-btn-and-error {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 15px;
+          .login-form-btn-item-button {
+            width: 100px;
+            height: 45px;
+            margin-right: 150px;
+          }
+          .text-error {
+            position: relative;
+            right: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .errorMsg-wrapper {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              span.errorMsg {
+                font-family: "Poppins";
+                color: rgb(206, 72, 72);
+                font-style: italic;
+                font-weight: 600;
+                letter-spacing: 2px;
+                font-size: 11px;
+              }
+            }
+            span.error-msg-text {
+              font-family: "Poppins";
+              font-size: 16px;
+              color: rgb(206, 72, 72);
+              font-style: italic;
+              font-weight: 600;
+              letter-spacing: 2px;
+              &.small-font {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      .ant-form-item {
+        .ant-form-item-row {
+          .ant-form-item-control {
+            width: 328px;
+          }
+        }
+      }
+      .login-form-not-a-member {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border: 1px solid;
+        .login-form-text1 {
+          font-family: "inconsolata";
+          font-size: 20px;
+          margin-right: 20px;
+        }
+        .login-form-not-a-member-register-btn {
+          background: #188fffb9;
+          width: 90px;
+          height: 40px;
+          &:hover {
+            background: #1890ff;
+          }
+          .login-form-text2 {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 820px) and (max-width: 865px) {
+    .login-form-inner {
+      .login-form {
+        .login-form-email-item {
+          margin-left: 15px;
+          .ant-form-item-row {
+            .ant-form-item-label {
+              position: relative;
+              right: 50px;
+            }
+          }
+          .login-form-email-item-input {
+            width: 105%;
+            position: relative;
+            right: 15px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 800px) and (max-width: 820px) {
+    .login-form-inner {
+      .login-form {
+        .login-form-email-item {
+          margin-left: 15px;
+          .ant-form-item-row {
+            .ant-form-item-label {
+              position: relative;
+              right: 50px;
+            }
+          }
+          .login-form-email-item-input {
+            width: 120%;
+            position: relative;
+            right: 30px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 576px) and (max-width: 800px) {
+    .login-form-inner {
+      .login-form {
+        .login-form-email-item {
+          .ant-form-item-row {
+            .ant-form-item-label {
+              position: relative;
+              right: 40px;
+            }
+          }
+          .login-form-email-item-input {
+            width: 120%;
+            position: relative;
+            right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .notification {
+    position: relative;
+    bottom: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ant-alert {
+      width: 490px;
+      position: relative;
+      bottom: 40px;
+      padding: 15px 30px;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+    }
+    span {
+      font-family: "Sofia Pro";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 0px;
+      letter-spacing: 1.5px;
+      color: black;
+      text-transform: initial;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+    span.noti-text {
+      position: relative;
+      top: 2px;
+      margin-left: 5px;
+    }
+  }
+}
+.login-form-mobile-top-container {
+  background-color: rgba(211, 211, 211, 0.377);
+  width: 92%;
+  padding: 20px 50px;
+  overflow-x: hidden;
+  .login-form-mobile-inner {
+  }
+}
+
+.login-form-avatar-modal {
+  width: 60%;
+  .ant-modal-content {
+    //isMobileScreen
+    .ant-modal-header {
+      .login-form-modal-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        span {
+          font-family: "inconsolata";
+          font-size: 20px;
+          letter-spacing: 1.5px;
+        }
+        .login-form-modal-header-close-btn-wrapper {
+          padding: 0;
+          border: none;
+          img {
+            width: 50px !important;
+            height: 50px !important;
+            position: relative;
+            bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .login-form-modal-content {
+    &.login-form-list-of-avatars {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      .login-form-avatar-wrapper {
+        .login-form-avatar-btn {
+          height: fit-content;
+
+          .login-form-avatar-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+  }
+  .login-form-choose-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    .login-form-choose-btn {
+      height: fit-content;
+      background: #e39ff6;
+      border: none;
+      &:hover {
+        background: #a1045a;
+      }
+      span {
+        font-family: "inconsolata";
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        color: white;
+      }
+    }
+  }
+  @media screen and (min-width: $medium) and (max-width: $x-large) {
+    .login-form-modal-content {
+      // border: 1px solid;
+
+      &.login-form-list-of-avatars {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 60%;
+      }
+    }
+  }
+  @media screen and (min-width: $small) and (max-width: $medium) {
+    .login-form-modal-content {
+      &.login-form-list-of-avatars {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 60%;
+        .login-form-avatar-wrapper {
+          .login-form-avatar-icon {
+            //this is the icon
+            width: 65px !important;
+            height: 65px !important;
+            // display: none;
+          }
+        }
+      }
+    }
+    .login-form-choose-btn-wrapper {
+      .login-form-choose-btn {
+        height: fit-content;
+        background: #e39ff6;
+        border: none;
+        &:hover {
+          background: #a1045a;
+        }
+        span {
+          font-family: "inconsolata";
+          font-size: 20px;
+          letter-spacing: 1.5px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@mixin label_styles {
+  font-family: "Oswald";
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+
+.signup-form-container {
+  width: auto;
+
+  .signup-form-inner {
+    margin-bottom: 100px;
+    .signup-form {
+      padding: 5px 170px;
+      width: 822px;
+      min-height: 650px;
+      background: rgba(26, 172, 131, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+
+      .signup-form-email-label {
+        font-family: "inconsolata";
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        margin-top: 50px;
+      }
+
+      .signup-form-email-item-input {
+        width: 100%;
+        height: 60px;
+      }
+
+      .signup-form-email-item-input-empty {
+        border-bottom: 1px solid red;
+        &::after {
+          display: flex;
+          align-items: center;
+          content: "!";
+          margin-left: 10px;
+          color: red;
+          font-weight: bold;
+        }
+      }
+      .signup-form-fullName-label {
+        font-family: "inconsolata";
+        font-size: 20px;
+        letter-spacing: 1.5px;
+      }
+
+      .signup-form-full-name-item-input {
+        width: 100%;
+        height: 60px;
+      }
+      .signup-form-full-name-item-input-empty {
+        border-bottom: 1px solid red;
+        &::after {
+          display: flex;
+          align-items: center;
+          content: "!";
+          margin-left: 10px;
+          color: red;
+          font-weight: bold;
+          font-weight: bold;
+        }
+      }
+      .signup-form-password-label {
+        font-family: "inconsolata";
+        font-size: 20px;
+        letter-spacing: 1.5px;
+      }
+      .signup-form-password-item-input {
+        width: 100%;
+        height: 60px;
+      }
+      .signup-form-password-item-input-empty {
+        border-bottom: 1px solid red;
+        &::after {
+          display: flex;
+          align-items: center;
+          content: "!";
+          margin-left: 10px;
+          color: red;
+          font-weight: bold;
+        }
+      }
+
+      .signup-form-gender-label {
+        font-family: "inconsolata";
+        font-size: 20px;
+        letter-spacing: 1.5px;
+      }
+      .signup-form-gender-item-select {
+        .ant-select-selector {
+          width: 150px;
+          height: 50px;
+          .ant-select-selection-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+      .signup-form-gender-item-select-empty {
+        width: 150px;
+        height: 50px;
+        .ant-select-selector {
+          border-bottom: 1px solid red;
+        }
+        .ant-select-selection-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .signup-form-country-label {
+        font-family: "inconsolata";
+        font-size: 20px;
+        letter-spacing: 1.5px;
+      }
+      .signup-form-country-item-select {
+        .ant-select-selector {
+          // width: 150px;
+          height: 50px;
+        }
+        .ant-select-selection-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .signup-form-country-item-select-empty {
+        width: 150px;
+        height: 50px;
+        .ant-select-selector {
+          border-bottom: 1px solid red;
+        }
+        .ant-select-selection-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .signup-form-btn-and-error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        .signup-form-btn-item-button {
+          width: 100px;
+          height: 45px;
+        }
+        .text-error {
+          width: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span.error-msg-text {
+            font-family: "Poppins";
+            font-size: 16px;
+            color: rgb(206, 72, 72);
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 2px;
+          }
+
+          .errorMsg-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            span.errorMsg {
+              font-family: "Poppins";
+              color: rgb(206, 72, 72);
+              font-style: italic;
+              font-weight: 600;
+              letter-spacing: 2px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .signup-form-not-a-member {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border: 1px solid;
+        .signup-form-text1 {
+          font-family: "inconsolata";
+          font-size: 20px;
+          margin-right: 20px;
+        }
+        .signup-form-not-a-member-register-btn {
+          background: #188fffb9;
+          width: 90px;
+          height: 40px;
+          &:hover {
+            background: #1890ff;
+          }
+          .signup-form-text2 {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $small) {
+    .signup-form-inner {
+      margin-bottom: 100px;
+      .signup-form {
+        background: #c6b7a451;
+        width: 550px;
+        .signup-form-email-label {
+          @include label_styles;
+          margin-top: 50px;
+          white-space: nowrap;
+        }
+        .signup-form-email-item-input {
+          width: 400px;
+          height: 60px;
+        }
+        .signup-form-email-item-input-empty {
+          border-bottom: 2px solid red;
+        }
+        .signup-form-fullName-label {
+          white-space: nowrap;
+          @include label_styles;
+        }
+        .signup-form-full-name-item-input {
+          width: 400px;
+          height: 60px;
+        }
+        .signup-form-full-name-item-input-empty {
+          border-bottom: 2px solid red;
+        }
+
+        .signup-form-gender-label {
+          white-space: nowrap;
+          @include label_styles;
+        }
+        .signup-form-gender-item-select {
+          .ant-select-selector {
+            width: 200px;
+            height: 50px;
+            // border: 1px solid;
+          }
+        }
+        .signup-form-gender-item-select-empty {
+          width: 150px;
+          height: 50px;
+          .ant-select-selector {
+            border-bottom: 2px solid red;
+          }
+        }
+        .signup-form-country-label {
+          white-space: nowrap;
+          @include label_styles;
+          margin-top: 15px;
+        }
+        .signup-form-country-item-select {
+          width: 200px !important;
+        }
+        .signup-form-country-item-select-empty {
+          .ant-select-selector {
+            border-bottom: 2px solid red;
+          }
+        }
+
+        .signup-form-password-label {
+          white-space: nowrap;
+          @include label_styles;
+          margin-top: 15px;
+        }
+        .signup-form-password-item-input {
+          width: 200px;
+          height: 60px;
+
+          .ant-input-clear-icon,
+          .anticon-eye-invisible,
+          .anticon-eye {
+            transform: scale(2) !important;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+          .anticon-eye-invisible,
+          .anticon-eye {
+            margin-right: 10px;
+          }
+          // .anticon anticon-eye-invisible ant-input-password-icon
+          // anticon anticon-eye ant-input-password-icon
+        }
+        .signup-form-password-item-input-empty {
+          border-bottom: 1px solid red;
+          &::after {
+            display: flex;
+            align-items: center;
+            content: "!";
+            margin-left: 10px;
+            color: red;
+            font-weight: bold;
+          }
+        }
+
+        .signup-form-btn-and-error {
+          .signup-form-btn-item-button {
+            width: 120px;
+            height: 55px;
+            background: rgba(12, 98, 127, 0.8) !important;
+            span {
+              font-size: 20px;
+            }
+          }
+          .text-error {
+            width: 300px;
+
+            span.error-msg-text {
+              font-family: "Poppins";
+              font-size: 16px;
+              color: rgb(206, 72, 72);
+            }
+          }
+        }
+
+        .signup-form-not-a-member {
+          // border: 1px solid;
+          .signup-form-text1 {
+            font-family: "Mulish";
+            font-size: 20px;
+            margin-right: 20px;
+            white-space: nowrap;
+          }
+          .signup-form-not-a-member-register-btn {
+            background: rgba(25, 131, 167, 0.5);
+
+            width: 120px;
+            height: 60px;
+
+            .signup-form-text2 {
+              color: white;
+              font-family: "Oswald";
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .signup-form-inner {
+      .signup-form {
+        .signup-form-email-item-input {
+          width: 300px;
+        }
+
+        .signup-form-full-name-item-input {
+          width: 300px;
+        }
+        .signup-form-not-a-member {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 400px) and (max-width: 550px) {
+    // overflow-x: hidden;
+    .signup-form-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .signup-form {
+        width: 55%;
+
+        .signup-form-email-item-input,
+        .signup-form-full-name-item-input {
+          width: 330px;
+        }
+
+        .signup-form-not-a-member {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    overflow-x: hidden;
+    .signup-form-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .signup-form {
+        width: 40%;
+        .signup-form-email-item-input,
+        .signup-form-full-name-item-input {
+          width: 200px;
+        }
+
+        .signup-form-not-a-member {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $small) and (max-width: $medium) {
+    .signup-form-inner {
+      margin-bottom: 100px;
+      .signup-form {
+        background: #584b3b51;
+        width: 550px;
+        // border: 2px solid red;
+        .signup-form-email-label {
+          @include label_styles;
+          margin-top: 50px;
+          white-space: nowrap;
+        }
+        .signup-form-email-item-input {
+          width: 400px;
+          height: 60px;
+          .anticon-close-circle {
+            transform: scale(2);
+          }
+        }
+        .signup-form-email-item-input-empty {
+          border-bottom: 2px solid red;
+        }
+        .signup-form-fullName-label {
+          white-space: nowrap;
+          @include label_styles;
+        }
+        .signup-form-full-name-item-input {
+          width: 400px;
+          height: 60px;
+          .anticon-close-circle {
+            transform: scale(2);
+          }
+        }
+        .signup-form-full-name-item-input-empty {
+          border-bottom: 2px solid red;
+        }
+
+        .signup-form-gender-label {
+          white-space: nowrap;
+          @include label_styles;
+        }
+        .signup-form-gender-item-select {
+        }
+        .signup-form-gender-item-select-empty {
+          .ant-select-selector {
+            border-bottom: 2px solid red;
+          }
+          .ant-select-selection-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .signup-form-country-label {
+          white-space: nowrap;
+          @include label_styles;
+          margin-top: 15px;
+        }
+        .signup-form-country-item-select {
+          width: 200px !important;
+        }
+        .signup-form-country-item-select-empty {
+          .ant-select-selector {
+            border-bottom: 2px solid red;
+          }
+        }
+
+        .signup-form-password-label {
+          white-space: nowrap;
+          @include label_styles;
+          margin-top: 15px;
+        }
+        .signup-form-password-item-input {
+          width: 300px;
+          height: 60px;
+
+          .ant-input-clear-icon,
+          .anticon-eye-invisible,
+          .anticon-eye {
+            transform: scale(2) !important;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+          .anticon-eye-invisible,
+          .anticon-eye {
+            margin-right: 10px;
+          }
+        }
+        .signup-form-password-item-input-empty {
+          border-bottom: 2px solid red;
+          &::after {
+            display: flex;
+            align-items: center;
+            content: "!";
+            margin-left: 10px;
+            color: red;
+            font-weight: bold;
+          }
+        }
+
+        .signup-form-btn-and-error {
+          .signup-form-btn-item-button {
+            width: 120px;
+            height: 55px;
+            background: rgba(12, 98, 127, 0.8) !important;
+            span {
+              font-size: 20px;
+            }
+          }
+          .text-error {
+            width: 300px;
+
+            span.error-msg-text {
+              font-family: "Poppins";
+              font-size: 16px;
+              color: rgb(206, 72, 72);
+              white-space: nowrap;
+            }
+          }
+        }
+
+        .signup-form-not-a-member {
+          .signup-form-text1 {
+            font-family: "Mulish";
+            font-size: 20px;
+            margin-right: 20px;
+            white-space: nowrap;
+          }
+          .signup-form-not-a-member-register-btn {
+            background: rgba(25, 131, 167, 0.5);
+            width: 120px;
+            height: 60px;
+            &:hover {
+              background: rgba(25, 131, 167, 0.8);
+            }
+            .signup-form-text2 {
+              color: white;
+              font-family: "Oswald";
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.signup-stepper-container {
+  overflow-x: hidden;
+}
+
+// ant-select ant-select-lg signup-form-gender-item-select signup-form-gender-item-select-empty ant-select-single ant-select-show-arrow
+
+// ant-select ant-select-lg signup-form-gender-item-select ant-select-single ant-select-show-arrow
+
+.ant-modal {
+  &.login-form-avatar-modal {
+    width: 60% !important;
+    // border: 1px solid;
+    .ant-modal-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  @media screen and (min-width: $large) and (max-width: $xx-large) {
+    &.login-form-avatar-modal {
+      width: 80% !important;
+    }
+  }
+}

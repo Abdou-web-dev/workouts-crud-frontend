@@ -1,0 +1,1108 @@
+@import "@fontsource/open-sans";
+// font-family: PlusJakartaSans,,Segoe UI,Roboto,Oxygen,Cantarell,Helvetica Neue,Ubuntu,sans-serif;
+//defining screen breakpoints for responsivness
+$x-small: 0px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1400px;
+
+.workout-form-container {
+  .workouts-form {
+    border: 0.5px solid lightgray;
+    margin-top: -30px;
+    padding: 40px;
+    border-radius: 5px;
+
+    .workouts-form-inner {
+      label,
+      input {
+        display: block;
+      }
+      input {
+        &.form-msg-error {
+          border: 1px solid var(--error);
+        }
+      }
+      .close-icon-container {
+        position: relative;
+        bottom: 60px;
+        left: 240px;
+      }
+      .form-btns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        button.form-btn {
+          background: var(--primary);
+          border: 0;
+          color: #fff;
+          padding: 10px;
+          font-family: "Poppins";
+          border-radius: 4px;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+        .form-reset-btn {
+          height: fit-content;
+          &:hover {
+            transform: scale(1.05);
+          }
+          img {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+      .form-select-exo-title-and-info-icon {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .ant-select-selector {
+          .ant-select-selection-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .form-select-label-and-select-component {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .form-select-exo-title-label {
+            font-family: "Inconsolata";
+            font-size: 18px;
+          }
+          .form-select-exo-title {
+          }
+          &.move-from-right {
+            margin-right: 20px;
+          }
+        }
+
+        .form-select-exo-title-info-btn {
+          .form-select-exo-title-info-btn-icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      .form-select-exo-categ-label-and-select-component {
+        .form-select-exo-categ-label {
+          font-family: "Inconsolata";
+          font-size: 18px;
+          margin: 15px 0;
+        }
+        .ant-select-selector {
+          .ant-select-selection-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .form-select-exo-categ {
+        }
+      }
+      .form-title-label-and-input-component {
+        display: flex;
+        align-items: center;
+        .form-input-title-and-label-wrapper {
+          .form-input-title-component {
+            width: 242px;
+          }
+          .form-title-label {
+            font-family: "Inconsolata";
+            font-size: 18px;
+          }
+        }
+        .form-input-title-icon-btn-wrapper {
+          .form-input-title-icon-btn {
+            margin-left: 10px;
+            .form-input-title-list-icon {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+      .form-load-label-and-load-input-component {
+        .form-input-load-component {
+          width: 242px;
+        }
+        .form-load-label {
+          font-family: "Inconsolata";
+          font-size: 18px;
+          margin-top: 10px;
+        }
+      }
+      .form-reps-label-and-reps-input-component {
+        .form-input-reps-component {
+          width: 242px;
+        }
+        .form-reps-label {
+          font-family: "Inconsolata";
+          font-size: 18px;
+        }
+      }
+    }
+    div.error-msg-container {
+      display: inline-block;
+
+      div.form-msg-error {
+        padding: 5px 8px;
+        background: #ffefef;
+        border: 1px solid var(--error);
+        color: var(--error);
+        border-radius: 4px;
+        margin: 20px 0;
+      }
+      div.error-msg-modal {
+        padding: 5px 8px;
+        color: var(--error);
+        border-radius: 4px;
+        margin: 20px 0;
+        letter-spacing: 2.8px;
+        font-size: 16px;
+        font-family: "Open Sans";
+        // color: rgb(74, 72, 73);
+      }
+    }
+  }
+  .workouts-form-allExistentWorkouts {
+    .workouts-form-inner {
+      .form-filter-btn-plus-btn {
+        padding: 10px;
+        background: rgba(211, 211, 211, 0.3);
+        height: fit-content;
+        padding: 5px 10px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        &:hover {
+          background: rgba(211, 211, 211, 0.5);
+        }
+        img {
+          width: 25px;
+          height: 25px;
+          margin-right: 15px;
+        }
+        span {
+          white-space: normal;
+        }
+      }
+      .form-filter-h3 {
+      }
+    }
+  }
+  .toggle-form-btn {
+    float: right;
+    position: relative;
+
+    .minimize_btn_container {
+      height: fit-content !important;
+      &:hover {
+        transform: scale(1.04);
+      }
+      .up-svg-icon {
+        fill: grey;
+      }
+    }
+    &.toggle-form-btn-modal {
+      position: relative;
+      bottom: 80px;
+      left: 60px;
+    }
+  }
+  &.workout-form_on_modal {
+    .workouts-form {
+      border: 0;
+      margin-top: -30px;
+      padding: 40px;
+      border-radius: 5px;
+
+      .workouts-form-inner {
+        input {
+          &.form-msg-error {
+            border: 1px solid var(--error);
+          }
+        }
+
+        .form-btns {
+          button.form-btn {
+            span {
+              font-size: larger;
+              font-family: "Mulish";
+            }
+          }
+          .form-reset-btn {
+            height: fit-content;
+
+            img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+        .form-select-exo-title-and-info-icon {
+          .form-select-exo-title-info-btn {
+            height: fit-content !important;
+            button {
+              height: fit-content;
+              margin-left: 15px;
+            }
+            .form-select-exo-title-info-btn-icon {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+      div.error-msg-container {
+        display: inline-block;
+        &.if_error_is_displayed {
+          border: 0.5px solid rgba(255, 0, 0, 0.2);
+        }
+      }
+    }
+    .toggle-form-btn {
+      &.toggle-form-btn-modal {
+        position: relative;
+        bottom: 40px;
+        left: 20px;
+      }
+    }
+    @media screen and (min-width: 800px) and (max-width: 1300px) {
+      .workouts-form {
+        .workouts-form-inner {
+          .form-btns {
+            margin-top: 50px;
+          }
+        }
+        div.error-msg-container {
+          width: 270px;
+          margin-top: 60px;
+          div.error-msg-modal {
+            // display: none;
+            // margin: 5px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $x-large) and (max-width: $xx-large) {
+    margin-right: 70px;
+    width: 400px;
+    .toggle-form-btn {
+      &.toggle-form-btn-modal {
+        position: relative;
+        bottom: 80px;
+        left: 60px;
+      }
+    }
+    .workouts-form {
+      padding: 60px;
+      margin-top: 180px;
+
+      .workouts-form-inner {
+        .form-select-exo-categ-label-and-select-component {
+          .form-select-exo-categ {
+            width: 250px !important;
+          }
+          .ant-select-selector {
+            height: 50px;
+            .ant-select-selection-item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+        .form-select-exo-title-and-info-icon {
+          .form-select-label-and-select-component {
+            .form-select-exo-title {
+              width: 250px !important;
+            }
+            .ant-select-selector {
+              height: 50px;
+              .ant-select-selection-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+          }
+
+          .form-select-exo-title-info-btn {
+            .form-select-exo-title-info-btn-icon {
+              width: 15px;
+              height: 15px;
+              // border: 1px solid red;
+            }
+          }
+        }
+        .form-title-label-and-input-component {
+          .form-input-title-and-label-wrapper {
+            .form-input-title-component {
+              width: 250px !important;
+              height: 50px;
+            }
+          }
+          .form-input-title-icon-btn-wrapper {
+            .form-input-title-icon-btn {
+              .form-input-title-list-icon {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+        .form-load-label-and-load-input-component {
+          .form-input-load-component {
+            width: 250px !important;
+            height: 50px;
+          }
+        }
+        .form-reps-label-and-reps-input-component {
+          .form-input-reps-component {
+            width: 250px !important;
+            height: 50px;
+          }
+          .form-reps-label {
+            // border: 1px solid red;
+            font-family: "Inconsolata";
+            font-size: 18px;
+            display: inline-block;
+          }
+        }
+        .form-reps-label,
+        .form-load-label,
+        .form-title-label,
+        .form-select-exo-categ-label,
+        .form-select-exo-title-label {
+          font-family: "Inconsolata";
+          font-size: 18px;
+          display: inline-block;
+        }
+        button.form-btn {
+          padding: 15px 15px;
+          font-family: "Karla";
+          border-radius: 4px;
+          background: #1aac83d7;
+          &:hover {
+            background: #1aac83;
+          }
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      div.error-msg-container {
+        display: inline-block;
+      }
+      // styles applied to the form, when the user clicks on the 3rd icon, underneath the search input
+      &.workouts-form-allExistentWorkouts {
+        padding: 5px;
+        margin-top: 30px;
+        position: relative;
+        right: 30px;
+        max-width: 130px;
+        .workouts-form-inner {
+          &:hover {
+            img {
+              translate: 3px;
+              transition: 0.6s ease;
+            }
+          }
+          .form-filter-btn-plus-btn {
+            max-width: 120px;
+            // border: 1px solid red;
+            span {
+              display: inline-block;
+            }
+            padding: 0px;
+            background: rgba(211, 211, 211, 0.4);
+            &:hover {
+              background: rgba(211, 211, 211, 0.6);
+            }
+            img {
+              width: 20px;
+              height: 20px;
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: $x-large) {
+    width: 300px;
+    margin-right: 70px;
+
+    .workouts-form {
+      padding: 40px;
+      margin-top: 260px;
+
+      .workouts-form-inner {
+        .form-select-exo-categ-label-and-select-component {
+          // border: 1px solid red;
+          .form-select-exo-categ {
+            width: 190px !important;
+          }
+          .ant-select-selector {
+            height: 50px;
+          }
+        }
+        .form-select-exo-title-and-info-icon {
+          .form-select-label-and-select-component {
+            .form-select-exo-title {
+              width: 190px !important;
+            }
+            .ant-select-selector {
+              height: 50px;
+            }
+          }
+        }
+        .form-title-label-and-input-component {
+          .form-input-title-and-label-wrapper {
+            .form-input-title-component {
+              width: 190px !important;
+              height: 50px;
+            }
+          }
+          .form-input-title-icon-btn-wrapper {
+            .form-input-title-icon-btn {
+              .form-input-title-list-icon {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+        .form-load-label-and-load-input-component {
+          .form-input-load-component {
+            width: 190px !important;
+            height: 50px;
+          }
+        }
+        .form-reps-label-and-reps-input-component {
+          .form-input-reps-component {
+            width: 190px !important;
+            height: 50px;
+          }
+          .form-reps-label {
+            font-family: "Inconsolata";
+            font-size: 18px;
+            display: inline-block;
+          }
+        }
+
+        button.form-btn {
+          padding: 15px 15px;
+          font-family: "Mulish";
+          border-radius: 4px;
+          background: #1aac83d7;
+          &:hover {
+            background: #1aac83;
+          }
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      div.error-msg-container {
+        display: inline-block;
+      }
+      // styles applied to the form, when the user clicks on the 3rd icon, underneath the search input
+      &.workouts-form-allExistentWorkouts {
+        // border: 10px solid red;
+        padding: 5px;
+        margin-top: 30px;
+        position: relative;
+        right: 30px;
+        max-width: 130px;
+        .workouts-form-inner {
+          &:hover {
+            img {
+              translate: 3px;
+              transition: 0.6s ease;
+            }
+          }
+          .form-filter-btn-plus-btn {
+            max-width: 120px;
+            // border: 1px solid red;
+            span {
+              display: inline-block;
+            }
+            padding: 0px;
+            background: rgba(211, 211, 211, 0.4);
+            &:hover {
+              background: rgba(211, 211, 211, 0.6);
+            }
+            img {
+              width: 20px;
+              height: 20px;
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: $x-large) {
+    .workouts-form {
+      // border: 1px solid red;
+      &.workouts-form-allExistentWorkouts {
+      }
+    }
+  }
+  @media screen and (min-width: 350px) and (max-width: 700px) {
+    width: 300px;
+    margin-right: 70px;
+
+    .workouts-form {
+      padding: 40px;
+      margin-top: 260px;
+
+      .workouts-form-inner {
+        .form-select-exo-categ-label-and-select-component {
+          .form-select-exo-categ {
+            width: 190px !important;
+          }
+          .ant-select-selector {
+            height: 50px;
+          }
+        }
+        .form-select-exo-title-and-info-icon {
+          .form-select-label-and-select-component {
+            .form-select-exo-title {
+              width: 190px !important;
+            }
+            .ant-select-selector {
+              height: 50px;
+            }
+          }
+        }
+        .form-title-label-and-input-component {
+          .form-input-title-and-label-wrapper {
+            .form-input-title-component {
+              width: 190px !important;
+              height: 50px;
+            }
+          }
+          .form-input-title-icon-btn-wrapper {
+            .form-input-title-icon-btn {
+              .form-input-title-list-icon {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+        .form-load-label-and-load-input-component {
+          .form-input-load-component {
+            width: 190px !important;
+            height: 50px;
+          }
+        }
+        .form-reps-label-and-reps-input-component {
+          .form-input-reps-component {
+            width: 190px !important;
+            height: 50px;
+          }
+          .form-reps-label {
+            font-family: "Inconsolata";
+            font-size: 18px;
+            display: inline-block;
+          }
+        }
+
+        button.form-btn {
+          padding: 15px 15px;
+          font-family: "Mulish";
+          border-radius: 4px;
+          background: #1aac83d7;
+          &:hover {
+            background: #1aac83;
+          }
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      div.error-msg-container {
+        display: inline-block;
+      }
+      // styles applied to the form, when the user clicks on the 3rd icon, underneath the search input
+      &.workouts-form-allExistentWorkouts {
+        // border: 10px solid red;
+        padding: 5px;
+        margin-top: 30px;
+        position: relative;
+        right: 30px;
+        max-width: 130px;
+        .workouts-form-inner {
+          &:hover {
+            img {
+              translate: 3px;
+              transition: 0.6s ease;
+            }
+          }
+          .form-filter-btn-plus-btn {
+            max-width: 120px;
+            // border: 1px solid red;
+            span {
+              display: inline-block;
+            }
+            padding: 0px;
+            background: rgba(211, 211, 211, 0.4);
+            &:hover {
+              background: rgba(211, 211, 211, 0.6);
+            }
+            img {
+              width: 20px;
+              height: 20px;
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 350px) {
+    width: 300px;
+    margin-right: 70px;
+    border: 1px solid red;
+
+    .workouts-form {
+      padding: 40px;
+      margin-top: 260px;
+
+      .workouts-form-inner {
+        .form-select-exo-categ-label-and-select-component {
+          .form-select-exo-categ {
+            width: 190px !important;
+          }
+          .ant-select-selector {
+            height: 50px;
+          }
+        }
+        .form-select-exo-title-and-info-icon {
+          .form-select-label-and-select-component {
+            .form-select-exo-title {
+              width: 190px !important;
+            }
+            .ant-select-selector {
+              height: 50px;
+            }
+          }
+        }
+        .form-title-label-and-input-component {
+          .form-input-title-and-label-wrapper {
+            .form-input-title-component {
+              width: 190px !important;
+              height: 50px;
+            }
+          }
+          .form-input-title-icon-btn-wrapper {
+            .form-input-title-icon-btn {
+              .form-input-title-list-icon {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+        .form-load-label-and-load-input-component {
+          .form-input-load-component {
+            width: 190px !important;
+            height: 50px;
+          }
+        }
+        .form-reps-label-and-reps-input-component {
+          .form-input-reps-component {
+            width: 190px !important;
+            height: 50px;
+          }
+          .form-reps-label {
+            font-family: "Inconsolata";
+            font-size: 18px;
+            display: inline-block;
+          }
+        }
+
+        button.form-btn {
+          padding: 15px 15px;
+          font-family: "Mulish";
+          border-radius: 4px;
+          background: #1aac83d7;
+          &:hover {
+            background: #1aac83;
+          }
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      div.error-msg-container {
+        display: inline-block;
+      }
+      // styles applied to the form, when the user clicks on the 3rd icon, underneath the search input
+      &.workouts-form-allExistentWorkouts {
+        // border: 10px solid red;
+        padding: 5px;
+        margin-top: 30px;
+        position: relative;
+        right: 30px;
+        max-width: 130px;
+        .workouts-form-inner {
+          &:hover {
+            img {
+              translate: 3px;
+              transition: 0.6s ease;
+            }
+          }
+          .form-filter-btn-plus-btn {
+            max-width: 120px;
+            // border: 1px solid red;
+            span {
+              display: inline-block;
+            }
+            padding: 0px;
+            background: rgba(211, 211, 211, 0.4);
+            &:hover {
+              background: rgba(211, 211, 211, 0.6);
+            }
+            img {
+              width: 20px;
+              height: 20px;
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1135px) and (max-width: 1240px) {
+    .workouts-form-allExistentWorkouts {
+      position: relative;
+      right: 150px !important;
+    }
+  }
+  @media screen and (min-width: 992px) and (max-width: 1135px) {
+    .workouts-form-allExistentWorkouts {
+      position: relative;
+      right: 200px !important;
+      top: 70px !important;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+.chest-suggest-btns {
+  position: relative;
+  right: 30px;
+  margin-top: 20px;
+}
+
+.ant-input-affix-wrapper {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.classAdded {
+  color: red;
+}
+
+//font size of placeholders
+.ant-input {
+  font-size: 12px;
+}
+.anticon {
+  &.anticon-close-circle {
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.mobile-form-ant-modal {
+  padding: 60px;
+
+  .ant-modal-content {
+    position: relative;
+    bottom: 130px;
+    overflow-x: scroll;
+    max-height: 650px;
+    background: #f5f5f5;
+    &::-webkit-scrollbar {
+      width: 15px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: white;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      background: rgba(119, 124, 132, 0.7);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      border-radius: 10px;
+      background: rgba(119, 124, 132, 0.8);
+    }
+    .ant-modal-close {
+      .ant-modal-close-x {
+        position: relative;
+        bottom: 30px;
+      }
+    }
+
+    .ant-modal-header {
+      display: none;
+    }
+    .ant-modal-body {
+      padding: 60px;
+    }
+  }
+}
+
+.add-workout-btn {
+  background: rgb(79, 162, 222) !important;
+  gap: 25px;
+  &:hover {
+    img {
+      translate: 5px;
+      transition: 0.2s ease;
+    }
+  }
+  span {
+    color: white;
+    font-size: 22px;
+    font-family: "Mulish";
+    text-transform: initial;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.d_flex {
+  display: flex;
+  justify-content: center;
+  transform: scale(1.15);
+  margin-top: 15px;
+}
+
+.notification {
+  // width: 400px;
+
+  .ant-alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    // position: relative;
+    // top: -40px;
+    // right: 0px;
+    // it is better to user margin here, instead of position : relative , because when hovering over the alert, if we use position : the box shadow will not be overlapping exactly on the alert...
+    margin-bottom: 50px;
+    padding: 15px 30px;
+
+    .ant-alert-close-icon {
+      .ant-alert-close-icon-btn {
+        img {
+          width: 50px !important;
+          height: 50px !important;
+        }
+      }
+    }
+  }
+  span {
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 0px;
+    letter-spacing: 1.5px;
+    color: black;
+    text-transform: initial;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  span.noti-text {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+  }
+  &.please-select-noti {
+    .ant-alert {
+      // width: 490px;
+      position: relative;
+      top: 10px;
+      right: 0px;
+      padding: 15px 30px;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+    }
+    span {
+      font-family: "Mulish";
+    }
+    &.no_box_shadow {
+      margin-top: -40px;
+      width: 370px;
+      position: relative;
+      left: 170px;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    &.noti_avatar_modal_open {
+      position: relative;
+      right: 0px;
+      margin-top: -100px;
+      width: 370px;
+      .ant-alert {
+        border: 1px dashed red;
+      }
+      @media screen and (min-width: $x-large) and (max-width: $xx-large) {
+        margin-top: -125px;
+        .ant-alert {
+          border: 1px dashed red;
+        }
+      }
+    }
+  }
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  @media screen and (min-width: $x-large) and (max-width: $xx-large) {
+    width: 400px;
+    .ant-alert {
+      // border: 1px solid red !important;
+      margin-bottom: -150px;
+
+      // max-width: 500px;
+
+      .ant-alert-message {
+        span.noti-text {
+          align-self: center;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $large) and (max-width: $x-large) {
+    width: 350px;
+    .ant-alert {
+      // border: 1px solid red !important;
+      margin-bottom: -150px;
+      margin-left: -30px !important;
+      width: 350px;
+      .ant-alert-message {
+        span.noti-text {
+          align-self: center;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $medium) and (max-width: $large) {
+    width: 320px;
+    .ant-alert {
+      margin-bottom: -200px;
+      margin-left: -40px;
+      width: 320px;
+      .ant-alert-message {
+        span.noti-text {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+.ant-message-notice {
+  .ant-message-notice-content {
+    padding: 20px;
+    span {
+      font-family: "Mulish";
+      font-size: 24px;
+      margin: 0 10px !important;
+    }
+    .ant-message-custom-content {
+      &.ant-message-warning {
+        .anticon {
+          // width: 60px;
+          transform: scale(1.6) !important;
+          margin: 0 10px;
+        }
+        span {
+          font-family: "Mulish";
+          font-size: 23px;
+          margin: 0 10px !important;
+        }
+      }
+    }
+  }
+}
+// this is how we center a antd modal correctly  inside the page and set its height and width
+.loading-mobile-form-ant-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ant-modal-content {
+    position: relative;
+    bottom: 50px;
+    height: 450px !important;
+    width: 70%;
+    border-radius: 10px;
+
+    .ant-modal-body {
+      padding-top: 140px;
+      padding-left: 50px;
+    }
+  }
+}
+
+.desktop-form-ant-modal {
+  margin-bottom: 250px;
+  .ant-modal-content {
+    .ant-modal-header {
+      .ant-modal-title {
+        .desktop-form-ant-modal-header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+
+          span {
+            font-family: "Mulish";
+            font-size: larger;
+          }
+          .desktop-form-ant-modal-header-toggle-btn-wrapper {
+            button.minimize_btn_container {
+              height: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}

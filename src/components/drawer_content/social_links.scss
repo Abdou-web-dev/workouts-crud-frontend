@@ -1,0 +1,307 @@
+@import "@fontsource/open-sans";
+@import "@fontsource/inconsolata";
+@import "@fontsource/mulish";
+//defining screen breakpoints for responsivness
+$x-small: 0px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1400px;
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  .social-icons-grp1,
+  .social-icons-grp2 {
+    display: flex;
+  }
+  @media screen and (min-width: 650px) and (max-width: 800px) {
+    .social-icons-grp1,
+    .social-icons-grp2 {
+      display: flex;
+      flex-direction: column;
+    }
+    // .social-icon-wrapper5 {}
+  }
+}
+.social-icons-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .social-icons-grp1,
+  .social-icons-grp2 {
+    display: flex;
+  }
+  & > *:nth-child(4),
+  & > *:nth-child(5) {
+    // margin-left: 60px;
+    position: relative;
+    left: 40px;
+  }
+}
+
+.social-icon-modal-container-grid {
+  // border: 1px solid red;
+  .social-icon-btn {
+  }
+}
+.social-icon-ant-modal {
+  .ant-modal-header {
+    .ant-modal-title {
+      .social-modal-title {
+        margin-top: 10px;
+
+        .social-modal-title-span1 {
+          font-family: "Inconsolata";
+          font-size: 30px;
+        }
+        .social-modal-title-span2 {
+          font-family: "Open Sans";
+          font-size: 34px;
+          letter-spacing: 4px;
+          margin-left: 10px;
+          color: #585e66;
+        }
+      }
+    }
+  }
+  .ant-modal-body {
+    .modal-content {
+      margin-bottom: 20px;
+
+      .modal-content-fb {
+        border-radius: 10px;
+        border: 1px solid #3b5998;
+      }
+      .modal-content-ins {
+        border-radius: 10px;
+        border: 1px solid #dd2a7b;
+      }
+      .modal-content-pin {
+        border-radius: 10px;
+        border: 1px solid #c8232c;
+      }
+      .modal-content-twitter {
+        border-radius: 10px;
+        border: 1px solid #00acee;
+      }
+      .modal-content-yt {
+        border-radius: 10px;
+        border: 1px solid #e62117;
+      }
+    }
+  }
+  .ant-modal-close {
+    .ant-modal-close-x {
+      position: relative;
+      bottom: 30px;
+      left: 30px;
+    }
+  }
+  &.ant-modal-grid {
+    .ant-modal-header {
+      .ant-modal-title {
+        .social-modal-title {
+          margin-top: 10px;
+
+          .social-modal-title-span1 {
+            font-family: "Open Sans";
+            font-size: 30px;
+          }
+          .social-modal-title-span2 {
+            font-family: "Inconsolata";
+            font-size: 34px;
+            letter-spacing: 4px;
+            margin-left: 10px;
+            color: #585e66;
+          }
+        }
+      }
+    }
+    .ant-modal-body {
+      .modal-content {
+        margin-bottom: 20px;
+
+        .modal-content-fb {
+          border-radius: 0;
+          border: 0;
+        }
+        .modal-content-ins {
+          border-radius: 0;
+          border: 0;
+        }
+        .modal-content-pin {
+          border-radius: 0;
+          border: 0;
+        }
+        .modal-content-twitter {
+          border-radius: 0;
+          border: 0;
+        }
+        .modal-content-yt {
+          border-radius: 0;
+          border: 0;
+        }
+      }
+    }
+    .ant-modal-close {
+      .ant-modal-close-x {
+        position: relative;
+        bottom: 30px;
+        left: 30px;
+        color: black;
+      }
+    }
+  }
+}
+
+.modal-fb {
+  .ant-modal-header {
+  }
+  .ant-modal-body {
+    background: url(../../assets/img/facebook-bg.svg);
+  }
+}
+.modal-insta {
+  .ant-modal-header {
+  }
+  .ant-modal-body {
+    background: url(../../assets/img/instagram-bg.svg);
+  }
+}
+.modal-yt {
+  .ant-modal-body {
+    background: url(../../assets/img/youtube-bg.svg);
+  }
+}
+.modal-pin {
+  .ant-modal-body {
+    background: url(../../assets/img/pinterest-bg.svg);
+  }
+}
+.modal-twitter {
+  .ant-modal-body {
+    background: url(../../assets/img/twitter-bg.svg);
+  }
+}
+
+// mulish
+// open-sans
+// poppins
+// roboto
+
+.social-mod-cont {
+  .social-mod-cont-left {
+    padding: 20px;
+
+    p {
+      font-family: "Mulish";
+      padding: 20px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .social-mod-cont-left-span1 {
+      font-family: "Mulish";
+      padding: 20px;
+      font-weight: 500;
+      font-size: 22px;
+    }
+    .social-mod-cont-left-span2 {
+      font-family: "Mulish";
+      padding: 20px;
+      font-weight: 900;
+      font-size: 26px;
+    }
+  }
+
+  .social-mod-cont-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    gap: 100px;
+    .social-mod-cont-btn {
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      span {
+        font-family: "Mulish";
+        font-weight: 900;
+        font-size: 26px;
+      }
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    .social-mod-cont-right-img-wrapper {
+      img {
+        // width: 90%;
+      }
+    }
+  }
+}
+.social-mod-cont-modal {
+  .ant-modal-content {
+    .ant-modal-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 25px;
+      span {
+        display: block;
+      }
+      span.soc-mod-span1 {
+        font-family: "Open Sans";
+        font-size: 34px;
+        letter-spacing: 4px;
+        margin-left: 10px;
+        color: black;
+      }
+      .soc-mod-span2 {
+        font-family: "Open Sans";
+        font-size: 34px;
+        letter-spacing: 4px;
+        margin-left: 10px;
+        color: #585e66;
+      }
+      img.soc-mod-img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+.social-mod-cont-grid {
+  .social-mod-cont-left {
+    padding: 20px;
+
+    p {
+      font-family: "Mulish";
+      padding: 0px;
+      font-weight: normal;
+      font-size: 20px;
+    }
+    .social-mod-cont-left-span1 {
+      font-family: "Mulish";
+      padding: 20px;
+      font-weight: 500;
+      font-size: 22px;
+    }
+    .social-mod-cont-left-span2 {
+      font-family: "Mulish";
+      padding: 20px;
+      font-weight: 900;
+      font-size: 26px;
+      font-style: italic;
+    }
+  }
+
+  .social-mod-cont-right {
+    margin: 20px 0;
+    gap: 50px;
+  }
+}

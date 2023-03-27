@@ -1,0 +1,255 @@
+@mixin d_flex {
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
+}
+
+@mixin text_styles {
+  font-family: "Poppins";
+  font-size: 22px;
+  //   text-transform: capitalize;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid lightgray;
+}
+@mixin text_styles_2 {
+  font-family: "Mulish";
+  font-size: 17px;
+  color: rgba(255, 0, 0, 0.77);
+  letter-spacing: 1.2px;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.33);
+}
+@mixin text_btn_styles {
+  font-family: "Inconsolata";
+  font-size: 17px;
+  text-transform: initial;
+  letter-spacing: 1.4px;
+  color: white;
+  font-weight: bold;
+  //   border-bottom: 1px solid lightgray;
+}
+
+.profile-page-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding-bottom: 400px;
+  .profile-email-wrapper {
+    @include d_flex;
+    gap: 25px;
+    padding: 25px 0;
+
+    .email_bloc1 {
+      @include d_flex;
+      gap: 15px;
+
+      img {
+        width: 44px;
+        height: 44px;
+      }
+      span {
+        @include text_styles();
+      }
+    }
+    .profile-copy-edit-btn-wrapper {
+      @include d_flex;
+      // gap: 25px;
+
+      .profile-email-copy-btn {
+        height: fit-content;
+        padding: 5px;
+        margin-right: 15px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    &.user_typing_email {
+      .email_bloc1 {
+        position: relative;
+        bottom: 2.8px;
+        img {
+          width: 35px;
+          height: 35px;
+          transition: 0.85s ease !important;
+        }
+        span {
+          font-size: 16px;
+          transition: 0.85s ease !important;
+        }
+      }
+    }
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+  .profile-divider {
+    // width: 80% ;
+  }
+
+  .profile-page-email-input-cancel_btn-not_valid-wrapper {
+    @include d_flex;
+    flex-direction: column;
+    .profile-page-email-input-wrapper {
+      @include d_flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      width: 100%;
+      .profile-page-email-input {
+        //=== ant-input-affix-wrapper
+        width: 35%;
+        margin: 0;
+        .ant-input {
+          height: 35px;
+          font-size: 17px;
+          font-family: "Poppins";
+          color: gray;
+        }
+        .ok_suffix-btn {
+        }
+        .clear_suffix-btn {
+          border: none;
+          padding: 0;
+        }
+        &.ok_clicked_email_invalid {
+          border: 1px solid rgba(255, 0, 0, 0.648);
+          box-shadow: none !important;
+        }
+      }
+      .x_icon-btn {
+        height: fit-content;
+        padding: 0;
+        .x_icon {
+          width: 55px;
+          height: 55px;
+        }
+      }
+    }
+    .not_valid_sentence {
+      span {
+        @include text_styles_2();
+      }
+    }
+  }
+
+  .profile-fullName-wrapper {
+    @include d_flex;
+    gap: 25px;
+    padding: 25px 0;
+
+    .fullName_bloc1 {
+      @include d_flex;
+      gap: 15px;
+    }
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    img {
+      width: 44px;
+      height: 44px;
+    }
+    span.name {
+      @include text_styles();
+    }
+
+    .profile-copy-edit-btn-wrapper {
+      .profile-email-copy-btn {
+        height: fit-content;
+        padding: 5px;
+        margin-right: 15px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    &.user_typing_fullName {
+      .fullName_bloc1 {
+        position: relative;
+        bottom: 2.8px;
+        img {
+          width: 35px;
+          height: 35px;
+          transition: 0.85s ease !important;
+        }
+        span {
+          font-size: 16px;
+          transition: 0.85s ease !important;
+        }
+      }
+    }
+  }
+  .profile-country_icon-wrapper {
+    @include d_flex;
+    gap: 25px;
+    padding: 25px 0;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    span.country_text {
+      @include text_styles();
+    }
+    .profile-email-copy-btn {
+      height: fit-content;
+      padding: 5px;
+      margin-right: 15px;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .profile-page-email-input-cancel_btn-not_valid-wrapper {
+      .profile-page-email-input-wrapper {
+        .profile-page-email-input {
+          //=== ant-input-affix-wrapper
+          width: 65%;
+          margin: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .profile-email-wrapper,
+    .profile-fullName-wrapper {
+      .email_bloc1,
+      .fullName_bloc1 {
+        span {
+          @include text_styles();
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &.profile-page-container_small_screen {
+    padding-left: 25px;
+    .profile-email-wrapper,
+    .profile-fullName-wrapper,
+    .profile-country_icon-wrapper {
+      @include d_flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+      padding: 25px 0;
+
+      .profile-copy-edit-btn-wrapper {
+        // border: 1px solid red;
+        gap: 0px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+//
+.country_selected {
+  border: 1px solid green !important;
+  height: 50px !important;
+  span {
+    font-weight: bold !important;
+    font-size: 25px !important;
+  }
+}
