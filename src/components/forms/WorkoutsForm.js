@@ -72,7 +72,7 @@ export const WorkoutsForm = ({
     }
     //quit the function at this point, if no user is authenticated and logged in, because only logged in users can add workouts or delete them...
 
-    const response = await fetch(`${backend_uri}/api/workouts`, {
+    const response = await fetch(`${backend_uri}/api/workouts/`, {
       method: "POST",
       body: JSON.stringify(workout),
       headers: {

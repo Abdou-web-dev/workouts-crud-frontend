@@ -52,7 +52,7 @@ export function EditModalContent({
     if (!user) {
       return;
     }
-    const response = await fetch(`${backend_uri}/api/workouts` + workout._id, {
+    const response = await fetch(`${backend_uri}/api/workouts/` + workout._id, {
       method: "PATCH", //PUt and PATCH are not equivalent
       body: JSON.stringify(updatedWorkout),
       headers: {

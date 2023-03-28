@@ -53,7 +53,7 @@ const Workouts = ({}) => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch(`${backend_uri}/api/workouts`, {
+      const response = await fetch(`${backend_uri}/api/workouts/`, {
         headers: { Authorization: `Bearer ${user?.token}` },
       });
       const json = await response.json();

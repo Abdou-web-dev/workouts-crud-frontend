@@ -32,7 +32,7 @@ export function WorkoutDetailsItemMobile({
     }
     //if there is no user, do not bother and run the code below, so the handleDelete is abandoned
 
-    const response = await fetch(`${backend_uri}/api/workouts` + workout._id, {
+    const response = await fetch(`${backend_uri}/api/workouts/` + workout._id, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,

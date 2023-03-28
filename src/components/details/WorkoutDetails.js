@@ -112,7 +112,7 @@ export const WorkoutDetails = ({
     }
     //if there is no user, do not bother and run the code below, so the handleClick is abandoned
 
-    const response = await fetch(`${backend_uri}/api/workouts` + workout._id, {
+    const response = await fetch(`${backend_uri}/api/workouts/` + workout._id, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,

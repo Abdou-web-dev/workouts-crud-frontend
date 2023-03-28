@@ -21,7 +21,7 @@ export function RepsUpdate({
   const [editDisabled, seteditDisabled] = useState(false);
 
   const handleEditReps = async () => {
-    const response = await fetch(`${backend_uri}/api/workouts` + workout._id, {
+    const response = await fetch(`${backend_uri}/api/workouts/` + workout._id, {
       method: "PATCH",
       // body: JSON.stringify(updatedWorkout.updReps),
       headers: {
