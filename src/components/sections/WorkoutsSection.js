@@ -384,7 +384,6 @@ export const WorkoutsSection = ({
           setHamburgerMenuIsOpen(hamburgerMenuIsOpen);
         }}
         footer={null}
-        // title={null}
         title={
           <div className={`search-field-mobile-modal-header`}>
             <Button

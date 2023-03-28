@@ -563,7 +563,6 @@ $xx-large: 1400px;
         flex-direction: row;
         justify-content: flex-end;
         // align-items: center;
-        width: 100%;
         .search-field-mobile-modal-header-close-btn {
           padding: 0;
           border: none;
@@ -588,7 +587,7 @@ $xx-large: 1400px;
       }
     }
     .ant-modal-header {
-      display: none;
+      // display: none;
     }
     .ant-modal-body {
       padding: 60px;
