@@ -375,25 +375,33 @@ export const WorkoutsSection = ({
         className={`search-field-mobile-modal`}
         open={openSearchInputModal}
         maskClosable={true}
-        closable={true}
+        closable={false}
         keyboard={true}
         mask={true}
         onOk={() => setopenSearchInputModal(false)}
         onCancel={() => {
           setopenSearchInputModal(false);
-
           setHamburgerMenuIsOpen(hamburgerMenuIsOpen);
-          // console.log("onCancel clicked");
         }}
         footer={null}
-        title={null}
+        // title={null}
+        title={
+          <div className={`search-field-mobile-modal-header`}>
+            <Button
+              onClick={() => setopenSearchInputModal(false)}
+              className={`search-field-mobile-modal-header-close-btn`}
+            >
+              <CloseX></CloseX>
+            </Button>
+          </div>
+        }
         bodyStyle={{
           background: "rgba(211, 211, 211, 0.38)",
         }}
         maskStyle={{
           background: "rgba(211, 211, 211, 0.15)",
         }}
-        closeIcon={<CloseX></CloseX>}
+        // closeIcon={<CloseX></CloseX>}
       >
         <SearchInputModal
           {...{

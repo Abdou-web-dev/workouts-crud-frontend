@@ -83,7 +83,11 @@ const DesktopNavbar = ({}) => {
                   : "navbar-ul"
               }
             >
-              <Link className="nav-router-link" to="/workouts">
+              <Link
+                style={{ textDecoration: "none" }}
+                className="nav-router-link"
+                to="/workouts"
+              >
                 <Stack className="app-nav-stack" direction={"row"} spacing={5}>
                   <li className="navbar-ul-li icon-and-word">
                     <img className="gym-img" src={gym} alt="" />
@@ -117,7 +121,7 @@ const DesktopNavbar = ({}) => {
                 className="workout-app-navbar-help-wrapper"
                 id="scroll-container"
               >
-                <Link to={`/help`}>
+                <Link style={{ textDecoration: "none" }} to={`/help`}>
                   <Button className="workout-app-navbar-help-btn">
                     <span
                       className="workout-app-navbar-help-text"
@@ -188,11 +192,19 @@ const DesktopNavbar = ({}) => {
           )}
           {!user && (
             <div className="workout-app-navbar-login-signup">
-              <Link to="/login" className="LoginOutlined-link">
+              <Link
+                style={{ textDecoration: "none" }}
+                to="/login"
+                className="LoginOutlined-link"
+              >
                 <LoginOutlined className="LoginOutlined-icon" />
                 <span className="login-text">login</span>
               </Link>
-              <Link to="/signup" className="signUpIcon-link">
+              <Link
+                style={{ textDecoration: "none" }}
+                to="/signup"
+                className="signUpIcon-link"
+              >
                 <img src={signUpIcon} alt="" className="signup-icon" />
                 <span className="signup-text">Sign up</span>
               </Link>
@@ -218,13 +230,21 @@ const DesktopNavbar = ({}) => {
         onClose={handleCloseMenu}
       >
         <MenuItem className="avatar-menu-item" onClick={handleCloseMenu}>
-          <Link className="avatar-menu-item-anchor" to={`profile`}>
+          <Link
+            style={{ textDecoration: "none" }}
+            className="avatar-menu-item-anchor"
+            to={`profile`}
+          >
             <img className="avatar-menu-profile-icon" src={profil} alt="" />
             <span className="avatar-menu-item-text">Profile</span>
           </Link>
         </MenuItem>
         <MenuItem className="avatar-menu-item" onClick={handleCloseMenu}>
-          <Link className="avatar-menu-item-anchor" to={`/starred-items`}>
+          <Link
+            style={{ textDecoration: "none" }}
+            className="avatar-menu-item-anchor"
+            to={`/starred-items`}
+          >
             <img className="avatar-menu-starred-icon" src={starred} alt="" />
             <span className="avatar-menu-item-text">Favorite Workouts</span>
           </Link>

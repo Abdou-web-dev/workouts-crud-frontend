@@ -324,7 +324,7 @@ const Login = ({}) => {
             <div className="login-form-not-a-member">
               <span className="login-form-text1"> not a member ?</span>
               <Button className="login-form-not-a-member-register-btn">
-                <Link to="/signup">
+                <Link style={{ textDecoration: "none" }} to="/signup">
                   <span className="login-form-text2"> Register</span>
                 </Link>
               </Button>

@@ -241,6 +241,7 @@ const MobileNavbar = ({}) => {
                 style={{ height: "fit-content", border: "none" }}
               >
                 <Link
+                  style={{ textDecoration: "none" }}
                   className="workout-hamburger-menu-home-link"
                   to="/workouts"
                 >
@@ -331,6 +332,7 @@ const MobileNavbar = ({}) => {
                 <ul className="hamburger-menu-list">
                   <div className="hamburger-menu-profile-link-wrapper">
                     <Link
+                      style={{ textDecoration: "none" }}
                       className={`hamburger-menu-link profile-anchor ${
                         !user ? "no_user" : ""
                       }`}
@@ -344,6 +346,7 @@ const MobileNavbar = ({}) => {
                     </Link>
                   </div>
                   <Link
+                    style={{ textDecoration: "none" }}
                     className={
                       user
                         ? "hamburger-menu-link starred-items-anchor"
@@ -375,6 +378,7 @@ const MobileNavbar = ({}) => {
                   </Button>
 
                   <Link
+                    style={{ textDecoration: "none" }}
                     className={`hamburger-menu-link help-anchor ${
                       !user ? "no_user" : ""
                     }`}

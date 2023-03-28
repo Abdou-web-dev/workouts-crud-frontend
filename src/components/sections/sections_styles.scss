@@ -557,6 +557,25 @@ $xx-large: 1400px;
   .ant-modal-content {
     max-height: 650px;
     background: none;
+    .ant-modal-header {
+      .search-field-mobile-modal-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        // align-items: center;
+        width: 100%;
+        .search-field-mobile-modal-header-close-btn {
+          padding: 0;
+          border: none;
+          img {
+            width: 50px !important;
+            height: 50px !important;
+            // position: relative;
+            // bottom: 10px;
+          }
+        }
+      }
+    }
     .ant-modal-close {
       .ant-modal-close-x {
         position: relative;
@@ -614,7 +633,6 @@ $xx-large: 1400px;
     }
   }
 }
-
 .workouts-list-filtered-container {
   display: flex;
   justify-content: center;

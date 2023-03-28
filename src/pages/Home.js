@@ -6,7 +6,11 @@ function Home() {
   return (
     <>
       <div className="home-container">
-        <Link to="/workouts" className="home-begin">
+        <Link
+          style={{ textDecoration: "none" }}
+          to="/workouts"
+          className="home-begin"
+        >
           <Button className="home-begin-btn">
             <span>Begin</span>
           </Button>
