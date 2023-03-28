@@ -562,15 +562,15 @@ $xx-large: 1400px;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        // align-items: center;
+        width: 100%;
+        background-color: rgba(211, 211, 211, 0.281);
         .search-field-mobile-modal-header-close-btn {
           padding: 0;
           border: none;
+          background: none;
           img {
-            width: 50px !important;
-            height: 50px !important;
-            // position: relative;
-            // bottom: 10px;
+            width: 60px !important;
+            height: 60px !important;
           }
         }
       }
