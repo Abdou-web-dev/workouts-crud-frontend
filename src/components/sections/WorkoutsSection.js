@@ -384,6 +384,8 @@ export const WorkoutsSection = ({
           setHamburgerMenuIsOpen(hamburgerMenuIsOpen);
         }}
         footer={null}
+        //do this same logic and styles for all of the project's Modal title prop
+        //closable={false}
         title={
           <div className={`search-field-mobile-modal-header`}>
             <Button

@@ -565,10 +565,11 @@ $xx-large: 1400px;
         width: 100%;
         background-color: rgba(211, 211, 211, 0.281);
         .search-field-mobile-modal-header-close-btn {
+          //do this same logic and styles for all of the project's Modal title prop
+          height: fit-content !important;
           padding: 0;
           border: none;
           background: none;
-          height: fit-content;
           img {
             width: 60px !important;
             height: 60px !important;
