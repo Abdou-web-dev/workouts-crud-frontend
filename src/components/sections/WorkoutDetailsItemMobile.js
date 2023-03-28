@@ -1,5 +1,6 @@
 import { Modal } from "antd";
 import { useState } from "react";
+import { backend_uri } from "../../App";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useWorkoutsContext } from "../../hooks/useWorkoutsContext";
 import { WorkoutCard } from "../card/WorkoutCard";
@@ -31,7 +32,7 @@ export function WorkoutDetailsItemMobile({
     }
     //if there is no user, do not bother and run the code below, so the handleDelete is abandoned
 
-    const response = await fetch("/api/workouts/" + workout._id, {
+    const response = await fetch(`${backend_uri}/api/workouts` + workout._id, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { backend_uri } from "../App";
 import { useAuthContext } from "./useAuthContext";
 
 export const useSignup = () => {
@@ -10,7 +11,7 @@ export const useSignup = () => {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch("/api/user/signup", {
+    const response = await fetch(`${backend_uri}/api/user/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

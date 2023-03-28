@@ -13,6 +13,7 @@ import { useWorkoutsContext } from "../../hooks/useWorkoutsContext";
 // date fns package and icons
 import InfoIcon from "@mui/icons-material/Info";
 import { formatDistanceToNow } from "date-fns";
+import { backend_uri } from "../../App";
 import AbsIcon from "../../assets/img/AbsIcon.png";
 import BackIcon from "../../assets/img/backIcon.png";
 import balance from "../../assets/img/balance.png";
@@ -111,7 +112,7 @@ export const WorkoutDetails = ({
     }
     //if there is no user, do not bother and run the code below, so the handleClick is abandoned
 
-    const response = await fetch("/api/workouts/" + workout._id, {
+    const response = await fetch(`${backend_uri}/api/workouts` + workout._id, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,

@@ -2,6 +2,7 @@ import { Button, IconButton } from "@mui/material";
 import { Alert, message, Modal } from "antd";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { backend_uri } from "../../App";
 import plusSign from "../../assets/img/plusSign.svg";
 import warning_icon from "../../assets/img/warning_icon.svg";
 import exercisesData from "../../assets/staticData/chestExercises.json";
@@ -71,7 +72,7 @@ export const WorkoutsForm = ({
     }
     //quit the function at this point, if no user is authenticated and logged in, because only logged in users can add workouts or delete them...
 
-    const response = await fetch("/api/workouts", {
+    const response = await fetch(`${backend_uri}/api/workouts`, {
       method: "POST",
       body: JSON.stringify(workout),
       headers: {

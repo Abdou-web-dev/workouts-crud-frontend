@@ -5,18 +5,17 @@ import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { Skeleton } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
+import { backend_uri } from "../App";
 import { WorkoutsForm } from "../components/forms/WorkoutsForm";
-
 import {
   LeftArrow as PrevIcon,
   RightArrow as NextIcon,
 } from "../components/icons/Icons";
-import { useMediaQuery } from "../hooks/UseMediaQuery";
-
 import { WorkoutsSection } from "../components/sections/WorkoutsSection";
 import { AntdSkeleton } from "../components/skeletons/AntdSkeleton";
 import { MainVariablesContext } from "../context/MainVariablesContext";
 import { useAuthContext } from "../hooks/useAuthContext";
+import { useMediaQuery } from "../hooks/UseMediaQuery";
 import "./pages_styles.scss";
 
 const Workouts = ({}) => {
@@ -54,7 +53,7 @@ const Workouts = ({}) => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch("/api/workouts", {
+      const response = await fetch(`${backend_uri}/api/workouts`, {
         headers: { Authorization: `Bearer ${user?.token}` },
       });
       const json = await response.json();

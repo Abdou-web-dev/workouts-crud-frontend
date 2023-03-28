@@ -14,6 +14,8 @@ import Signup from "./pages/Signup";
 import StarredItems from "./pages/StarredItems";
 import Workouts from "./pages/Workouts";
 
+export const backend_uri = `https://workouts-crud-app-abdel-api.onrender.com`;
+
 function App() {
   const { user } = useAuthContext();
   const isSmallScreen = useMediaQuery("(max-width: 576px)");

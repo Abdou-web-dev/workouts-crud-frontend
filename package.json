@@ -1,5 +1,6 @@
 {
   "name": "workouts-crud-frontend",
+  "proxy": "https://workouts-crud-app-abdel-api.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

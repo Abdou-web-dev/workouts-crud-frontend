@@ -4,6 +4,7 @@ import editImg from "../../assets/img/editIcon.svg";
 // import checkmarkIcon from "../../assets/img/checked.svg";
 // import editIconPen from "../../assets/img/editer.png";
 import { CloseOutlined } from "@ant-design/icons";
+import { backend_uri } from "../../App";
 import "./update_styles.scss";
 
 export function RepsUpdate({
@@ -20,8 +21,8 @@ export function RepsUpdate({
   const [editDisabled, seteditDisabled] = useState(false);
 
   const handleEditReps = async () => {
-    const response = await fetch("/api/workouts/" + workout._id, {
-      method: "PATCH", //if it does not work , use "PUT"
+    const response = await fetch(`${backend_uri}/api/workouts` + workout._id, {
+      method: "PATCH",
       // body: JSON.stringify(updatedWorkout.updReps),
       headers: {
         "Content-Type": "application/json",
