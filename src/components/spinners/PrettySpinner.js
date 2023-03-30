@@ -11,7 +11,6 @@ export function PrettySpinner() {
       <div></div>
       <div></div>
       <div></div>
-      <div></div>
     </div>
   );
 }

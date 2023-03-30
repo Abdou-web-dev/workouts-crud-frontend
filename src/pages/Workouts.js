@@ -94,137 +94,139 @@ const Workouts = ({}) => {
     workouts,
   ]);
 
-  if (!workouts && !workouts?.length) {
-    return (
-      <>
-        <WorkoutsSkeleton {...{ isDesktopScreen }} />
-      </>
-    );
-  } else if (workouts?.length && user !== null) {
-    return (
-      <>
-        <div className="workouts-page-container">
-          <div className="workouts-main-section">
-            <WorkoutsSection
-              {...{
-                workouts,
-                currentPage,
-                setmovePaginationFromBottom,
-                setpaginationClassName,
-                searchInput,
-                setSearchInput,
-                setCurrentPage,
-                displayPagination,
-                setDisplayPagination,
-                detailsContClass,
-                setdetailsContClass,
-                filteredResults,
-                setFilteredResults,
-                showAllExistentWorkouts,
-                setshowAllExistentWorkouts,
-                showMobileFormModal,
-                openSearchInputModal,
-                setopenSearchInputModal,
-                filterBtnClicked,
-                setfilterBtnClicked,
-              }}
-            ></WorkoutsSection>
-          </div>
-
-          <div
-            className={
-              showAllExistentWorkouts
-                ? "workouts-main-form form-3rd-section"
-                : "workouts-main-form"
-            }
-            style={{ height: isMobileScreen ? `80px` : "" }}
-          >
-            <div>
-              <WorkoutsForm
+  if (user !== null) {
+    if (!workouts) {
+      return (
+        <>
+          <WorkoutsSkeleton {...{ isDesktopScreen }} />
+        </>
+      );
+    } else if (workouts) {
+      return (
+        <>
+          <div className="workouts-page-container">
+            <div className="workouts-main-section">
+              <WorkoutsSection
                 {...{
                   workouts,
-                  paginationClassName,
-                  showAllExistentWorkouts,
+                  currentPage,
+                  setmovePaginationFromBottom,
+                  setpaginationClassName,
+                  searchInput,
+                  setSearchInput,
                   setCurrentPage,
+                  displayPagination,
+                  setDisplayPagination,
+                  detailsContClass,
+                  setdetailsContClass,
+                  filteredResults,
+                  setFilteredResults,
+                  showAllExistentWorkouts,
+                  setshowAllExistentWorkouts,
                   showMobileFormModal,
-                  setShowMobileFormModal,
                   openSearchInputModal,
+                  setopenSearchInputModal,
                   filterBtnClicked,
+                  setfilterBtnClicked,
                 }}
-              />
+              ></WorkoutsSection>
             </div>
+
+            <div
+              className={
+                showAllExistentWorkouts
+                  ? "workouts-main-form form-3rd-section"
+                  : "workouts-main-form"
+              }
+              style={{ height: isMobileScreen ? `80px` : "" }}
+            >
+              <div>
+                <WorkoutsForm
+                  {...{
+                    workouts,
+                    paginationClassName,
+                    showAllExistentWorkouts,
+                    setCurrentPage,
+                    showMobileFormModal,
+                    setShowMobileFormModal,
+                    openSearchInputModal,
+                    filterBtnClicked,
+                  }}
+                />
+              </div>
+            </div>
+
+            <BackTop />
           </div>
 
-          <BackTop />
-        </div>
-
-        {/* pagination of Workouts  , with the pages' numbers */}
-        {/* display the pagination only if there are some workouts  */}
-        {workouts.length !== 0 ? (
-          <>
-            {searchInput?.length === 0 && !showAllExistentWorkouts && (
-              <Pagination
-                className={`${paginationClassName} ${
-                  isTabletScreen && layoutGrid
-                    ? `pagination-content-loaded-grid-to-bottom`
-                    : ""
-                }`}
-                prevIcon={
-                  paginationClassName === "pagination-content-loaded-grid" ? (
-                    <PrevIcon />
-                  ) : (
-                    <LeftOutlined />
-                  )
-                }
-                nextIcon={
-                  paginationClassName === "pagination-content-loaded-grid" ? (
-                    <NextIcon />
-                  ) : (
-                    <RightOutlined />
-                  )
-                }
-                style={{
-                  border:
-                    paginationClassName === "pagination-content-loaded-grid"
-                      ? ""
-                      : `1px solid lightgray`,
-                  padding:
-                    paginationClassName === "pagination-content-loaded-grid"
-                      ? "10px 0"
-                      : `50px 0`,
-                  position: "relative",
-                  bottom: movePaginationFromBottom,
-                  display: displayPagination,
-                  justifyContent: "center",
-                }}
-                total={
-                  workouts?.length > 0 && workouts?.length <= 10
-                    ? 30 //3 pages
-                    : workouts?.length >= 10 && workouts?.length <= 20
-                    ? 60 //6 pages
-                    : workouts?.length >= 20 && workouts?.length <= 30
-                    ? 90
-                    : workouts?.length >= 30 && workouts?.length <= 40
-                    ? 120
-                    : workouts?.length >= 40 && workouts?.length <= 50
-                    ? 150
-                    : workouts?.length >= 50 && workouts?.length <= 60
-                    ? 180
-                    : 250
-                }
-                // total={200} //200 means 20 page
-                current={currentPage}
-                onChange={(page, e) => {
-                  setCurrentPage(page);
-                }}
-                showSizeChanger={false}
-                showQuickJumper
-              />
-            )}
-          </>
-        ) : null}
-      </>
-    );
+          {/* pagination of Workouts  , with the pages' numbers */}
+          {/* display the pagination only if there are some workouts  */}
+          {workouts.length !== 0 ? (
+            <>
+              {searchInput?.length === 0 && !showAllExistentWorkouts && (
+                <Pagination
+                  className={`${paginationClassName} ${
+                    isTabletScreen && layoutGrid
+                      ? `pagination-content-loaded-grid-to-bottom`
+                      : ""
+                  }`}
+                  prevIcon={
+                    paginationClassName === "pagination-content-loaded-grid" ? (
+                      <PrevIcon />
+                    ) : (
+                      <LeftOutlined />
+                    )
+                  }
+                  nextIcon={
+                    paginationClassName === "pagination-content-loaded-grid" ? (
+                      <NextIcon />
+                    ) : (
+                      <RightOutlined />
+                    )
+                  }
+                  style={{
+                    border:
+                      paginationClassName === "pagination-content-loaded-grid"
+                        ? ""
+                        : `1px solid lightgray`,
+                    padding:
+                      paginationClassName === "pagination-content-loaded-grid"
+                        ? "10px 0"
+                        : `50px 0`,
+                    position: "relative",
+                    bottom: movePaginationFromBottom,
+                    display: displayPagination,
+                    justifyContent: "center",
+                  }}
+                  total={
+                    workouts?.length > 0 && workouts?.length <= 10
+                      ? 30 //3 pages
+                      : workouts?.length >= 10 && workouts?.length <= 20
+                      ? 60 //6 pages
+                      : workouts?.length >= 20 && workouts?.length <= 30
+                      ? 90
+                      : workouts?.length >= 30 && workouts?.length <= 40
+                      ? 120
+                      : workouts?.length >= 40 && workouts?.length <= 50
+                      ? 150
+                      : workouts?.length >= 50 && workouts?.length <= 60
+                      ? 180
+                      : 250
+                  }
+                  // total={200} //200 means 20 page
+                  current={currentPage}
+                  onChange={(page, e) => {
+                    setCurrentPage(page);
+                  }}
+                  showSizeChanger={false}
+                  showQuickJumper
+                />
+              )}
+            </>
+          ) : null}
+        </>
+      );
+    }
   }
 };
 
