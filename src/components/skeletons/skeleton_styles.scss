@@ -1,0 +1,13 @@
+.pretty-spinner-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  span {
+    font-family: "Mulish";
+    font-size: 30px;
+    color: grey;
+  }
+  .pretty-spinner-wrapper {
+  }
+}

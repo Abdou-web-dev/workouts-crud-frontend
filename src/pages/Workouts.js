@@ -1,9 +1,7 @@
-import { LoadingOutlined } from "@ant-design/icons";
-import { BackTop, Pagination, Spin } from "antd";
+import { BackTop, Pagination } from "antd";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 // components
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import { Skeleton } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { backend_uri } from "../App";
 import { WorkoutsForm } from "../components/forms/WorkoutsForm";
@@ -12,7 +10,7 @@ import {
   RightArrow as NextIcon,
 } from "../components/icons/Icons";
 import { WorkoutsSection } from "../components/sections/WorkoutsSection";
-import { AntdSkeleton } from "../components/skeletons/AntdSkeleton";
+import WorkoutsSkeleton from "../components/skeletons/WorkoutsSkeleton";
 import { MainVariablesContext } from "../context/MainVariablesContext";
 import { useAuthContext } from "../hooks/useAuthContext";
 import { useMediaQuery } from "../hooks/UseMediaQuery";
@@ -96,58 +94,13 @@ const Workouts = ({}) => {
     workouts,
   ]);
 
-  const MuiSkeletonJSX = (
-    <Skeleton
-      sx={{
-        border: `2px solid rgba(26, 173, 131, 0.4 )`,
-        borderRadius: `5px`,
-        bgcolor: "#FDFDFB",
-        padding: `15px 0 0 25px`,
-      }}
-      variant="rectangular"
-      width={964}
-      height={191}
-    >
-      <AntdSkeleton></AntdSkeleton>
-    </Skeleton>
-  );
-  const antIcon = (
-    <LoadingOutlined
-      style={{
-        fontSize: 50,
-      }}
-    />
-  );
-  // Work on the Skeleton's responsivness!!!
-  if (!workouts) {
+  if (!workouts && !workouts?.length) {
     return (
-      <div className="skeleton-content-not-loaded">
-        {isDesktopScreen && (
-          <Pagination
-            disabled
-            className={"pagination-content-not-loaded"}
-            total={50}
-            showSizeChanger={false}
-            style={{ position: "relative", bottom: `30px` }}
-          />
-        )}
-
-        {/* Mui Skeleton for the container of the workout */}
-        <div style={{ position: "relative", bottom: `10px` }}>
-          <div style={{ marginBottom: `40px` }}> {MuiSkeletonJSX}</div>
-          <div style={{ marginBottom: `40px` }}> {MuiSkeletonJSX}</div>
-          <div style={{ marginBottom: `40px` }}> {MuiSkeletonJSX}</div>
-          <div style={{ marginBottom: `40px` }}> {MuiSkeletonJSX}</div>
-        </div>
-        <Spin
-          className="spinner"
-          style={{ marginBottom: `0px` }}
-          spinning={true}
-          indicator={antIcon}
-        />
-      </div>
+      <>
+        <WorkoutsSkeleton {...{ isDesktopScreen }} />
+      </>
     );
-  } else if (user) {
+  } else if (workouts?.length && user !== null) {
     return (
       <>
         <div className="workouts-page-container">
@@ -276,10 +229,3 @@ const Workouts = ({}) => {
 };
 
 export default Workouts;
-
-// if (workouts === null) {
-//   console.log(Array.isArray(workouts)); false , workouts is an Object
-// }
-// useEffect(() => {
-//   if (user) console.log("user infos from Workouts", user);
-// }, [user]);

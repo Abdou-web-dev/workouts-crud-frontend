@@ -427,7 +427,7 @@ export function WorkoutsListBtns({
         )}
 
         <>
-          {showAllExistentWorkouts && (
+          {showAllExistentWorkouts && !workouts?.length && (
             <div className="no_workout">
               <span>First, add some workouts to your page , through the </span>
               <AddWorkoutBtn AddWorkoutBtnDisabled={true} />
