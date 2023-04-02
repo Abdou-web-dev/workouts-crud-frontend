@@ -1,0 +1,17 @@
+.empty-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-family: "Poppins";
+    font-size: 20px;
+    text-transform: initial;
+    letter-spacing: 2px;
+    color: grey;
+    font-weight: 300;
+  }
+  img {
+    width: 250px;
+  }
+}
