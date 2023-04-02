@@ -6,14 +6,15 @@ import React, { useContext, useEffect, useState } from "react";
 import { backend_uri } from "../App";
 import { WorkoutsForm } from "../components/forms/WorkoutsForm";
 import {
-  LeftArrow as PrevIcon,
   RightArrow as NextIcon,
+  LeftArrow as PrevIcon,
 } from "../components/icons/Icons";
+import { EmptyList } from "../components/lists/EmptyList";
 import { WorkoutsSection } from "../components/sections/WorkoutsSection";
 import WorkoutsSkeleton from "../components/skeletons/WorkoutsSkeleton";
 import { MainVariablesContext } from "../context/MainVariablesContext";
-import { useAuthContext } from "../hooks/useAuthContext";
 import { useMediaQuery } from "../hooks/UseMediaQuery";
+import { useAuthContext } from "../hooks/useAuthContext";
 import "./pages_styles.scss";
 
 const Workouts = ({}) => {
@@ -105,32 +106,39 @@ const Workouts = ({}) => {
       return (
         <>
           <div className="workouts-page-container">
-            <div className="workouts-main-section">
-              <WorkoutsSection
-                {...{
-                  workouts,
-                  currentPage,
-                  setmovePaginationFromBottom,
-                  setpaginationClassName,
-                  searchInput,
-                  setSearchInput,
-                  setCurrentPage,
-                  displayPagination,
-                  setDisplayPagination,
-                  detailsContClass,
-                  setdetailsContClass,
-                  filteredResults,
-                  setFilteredResults,
-                  showAllExistentWorkouts,
-                  setshowAllExistentWorkouts,
-                  showMobileFormModal,
-                  openSearchInputModal,
-                  setopenSearchInputModal,
-                  filterBtnClicked,
-                  setfilterBtnClicked,
-                }}
-              ></WorkoutsSection>
-            </div>
+            {workouts?.length ? (
+              <div className="workouts-main-section">
+                {/* Workouts List */}
+                <WorkoutsSection
+                  {...{
+                    workouts,
+                    currentPage,
+                    setmovePaginationFromBottom,
+                    setpaginationClassName,
+                    searchInput,
+                    setSearchInput,
+                    setCurrentPage,
+                    displayPagination,
+                    setDisplayPagination,
+                    detailsContClass,
+                    setdetailsContClass,
+                    filteredResults,
+                    setFilteredResults,
+                    showAllExistentWorkouts,
+                    setshowAllExistentWorkouts,
+                    showMobileFormModal,
+                    openSearchInputModal,
+                    setopenSearchInputModal,
+                    filterBtnClicked,
+                    setfilterBtnClicked,
+                  }}
+                ></WorkoutsSection>
+              </div>
+            ) : (
+              <div>
+                <EmptyList />
+              </div>
+            )}
 
             <div
               className={
@@ -141,6 +149,7 @@ const Workouts = ({}) => {
               style={{ height: isMobileScreen ? `80px` : "" }}
             >
               <div>
+                {/* Workouts Form */}
                 <WorkoutsForm
                   {...{
                     workouts,
