@@ -9,7 +9,6 @@ import {
   RightArrow as NextIcon,
   LeftArrow as PrevIcon,
 } from "../components/icons/Icons";
-import { EmptyList } from "../components/lists/EmptyList";
 import { WorkoutsSection } from "../components/sections/WorkoutsSection";
 import WorkoutsSkeleton from "../components/skeletons/WorkoutsSkeleton";
 import { MainVariablesContext } from "../context/MainVariablesContext";
@@ -106,39 +105,33 @@ const Workouts = ({}) => {
       return (
         <>
           <div className="workouts-page-container">
-            {workouts?.length ? (
-              <div className="workouts-main-section">
-                {/* Workouts List */}
-                <WorkoutsSection
-                  {...{
-                    workouts,
-                    currentPage,
-                    setmovePaginationFromBottom,
-                    setpaginationClassName,
-                    searchInput,
-                    setSearchInput,
-                    setCurrentPage,
-                    displayPagination,
-                    setDisplayPagination,
-                    detailsContClass,
-                    setdetailsContClass,
-                    filteredResults,
-                    setFilteredResults,
-                    showAllExistentWorkouts,
-                    setshowAllExistentWorkouts,
-                    showMobileFormModal,
-                    openSearchInputModal,
-                    setopenSearchInputModal,
-                    filterBtnClicked,
-                    setfilterBtnClicked,
-                  }}
-                ></WorkoutsSection>
-              </div>
-            ) : (
-              <div>
-                <EmptyList />
-              </div>
-            )}
+            <div className="workouts-main-section">
+              {/* Workouts List */}
+              <WorkoutsSection
+                {...{
+                  workouts,
+                  currentPage,
+                  setmovePaginationFromBottom,
+                  setpaginationClassName,
+                  searchInput,
+                  setSearchInput,
+                  setCurrentPage,
+                  displayPagination,
+                  setDisplayPagination,
+                  detailsContClass,
+                  setdetailsContClass,
+                  filteredResults,
+                  setFilteredResults,
+                  showAllExistentWorkouts,
+                  setshowAllExistentWorkouts,
+                  showMobileFormModal,
+                  openSearchInputModal,
+                  setopenSearchInputModal,
+                  filterBtnClicked,
+                  setfilterBtnClicked,
+                }}
+              ></WorkoutsSection>
+            </div>
 
             <div
               className={
